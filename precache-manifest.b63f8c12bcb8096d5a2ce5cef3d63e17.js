@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2198780212b60179032201d22aa4482b",
+    "revision": "31214fad8a61c36ed11097c127eac9f7",
     "url": "/QuantumFrontier/index.html"
   },
   {
-    "revision": "b5930f47d6b45b103a41",
-    "url": "/QuantumFrontier/static/css/main.a1d7a33e.chunk.css"
+    "revision": "8817aebf85e65338b2fb",
+    "url": "/QuantumFrontier/static/css/main.85b3a57b.chunk.css"
   },
   {
     "revision": "71dff8bc687aeafd8e41",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/QuantumFrontier/static/js/2.e1fb1704.chunk.js.LICENSE"
   },
   {
-    "revision": "b5930f47d6b45b103a41",
-    "url": "/QuantumFrontier/static/js/main.dbdab8f4.chunk.js"
+    "revision": "8817aebf85e65338b2fb",
+    "url": "/QuantumFrontier/static/js/main.69096914.chunk.js"
   },
   {
     "revision": "cce2572fee6a5362a166",
