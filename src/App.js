@@ -15,7 +15,6 @@ import Member from './member/Member';
 
 
 function App() {
-  console.log('app loaded')
 
   return (
     <div className='App'>
