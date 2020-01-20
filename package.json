@@ -24,7 +24,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://qwqmlf.github.io/QuantumFrontier",
+  "homepage": "https://qwqmlf.github.io/QuantumFrontier/",
   "eslintConfig": {
     "extends": "react-app"
   },
