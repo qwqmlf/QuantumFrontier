@@ -20,7 +20,8 @@ function App() {
     <div className='App'>
       <Router history={history}>
       <ScrollToTop >
-        <Route exact path={'/'} component={Title}/>
+        {/* <Route exact path={'/'} component={Title}/> */}
+        <Route exact path={'/QuantumFrontier/'} component={Title}/>
         <Route path={'/home'} component={Home}/>
         <Route path={'/mnist'} component={Mnist} />
         <Route path={'/tutorial'} component={Tutorial}/>
