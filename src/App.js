@@ -18,7 +18,6 @@ function App() {
 
   return (
     <div className='App'>
-
       <Router history={history}>
       <ScrollToTop >
         <Route exact path={'/QuantumFrontier/'} component={Title}/>
@@ -30,7 +29,6 @@ function App() {
         <Route path={'/member'} component={Member} />
         </ScrollToTop>
       </Router>
-
     </div>
   );
 }
