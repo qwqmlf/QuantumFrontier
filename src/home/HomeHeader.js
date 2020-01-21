@@ -60,13 +60,10 @@ const useStyles = makeStyles(theme => ({
 }));
 function HomeHeader() {
     const classes = useStyles();
-    const handleToNextPage = () => {
-        history.push('/')
-    }
 
     return (
         <div className={classes.header}>
-            <header onClick={handleToNextPage} className={classes.textSpace}>
+            <header className={classes.textSpace}>
                 <div className={classes.text}>
                     QML Frontier
                 </div>
