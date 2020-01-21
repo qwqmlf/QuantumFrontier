@@ -90,6 +90,11 @@ function Footer() {
                     <br />
                     <br />
                     <br />
+                    This project supported by IPA.
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                 </div>
                 <br />
                 <br />
