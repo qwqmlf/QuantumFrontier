@@ -137,10 +137,6 @@ function MiniDrawer() {
 
   const [open, setOpen] = React.useState(false);
 
-  const handleToNextPage = () => {
-    history.push('/')
-  }
-
   // drawer function
   function handleDrawerOpen() {
     setOpen(true);
@@ -174,7 +170,6 @@ function MiniDrawer() {
           <Typography
             variant="h6"
             noWrap
-            onClick={handleToNextPage}
           >
             {/* タイトル */}
             QML Frontier
