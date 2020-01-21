@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f9ba7d61d6fd973b49fd9d8c116e35aa",
+    "revision": "31a8bc47b3273b0922161ac4d534f608",
     "url": "/QuantumFrontier/index.html"
   },
   {
