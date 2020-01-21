@@ -68,39 +68,10 @@ class Canvas extends Component {
         this.setState({ drawing: false });
     }
 
-    // drawCanvas() {
-    //     // drawingがtrueじゃなかったら返す
-    //     if (!this.state.drawing){
-    //         return
-    //     };
-    //     const ctx = this.getContext();
-    //     let rect = e.target.getBoundingClientRect();
-    //     let x = e.clientX - rect.left;
-    //     let y = e.clientY - rect.top;
-    //     let w = 18;
-    //     //document.getElementById('width').value;
-    //     let color = '#000000';
-    //         //document.getElementById('color').value;
-    //     let r   = parseInt(color.substring(1,3), 16);
-    //     let g = parseInt(color.substring(3,5), 16);
-    //     let b  = parseInt(color.substring(5,7), 16);
-    //     // 描画
-    //     ctx.lineCap = 'round';
-    //     ctx.strokeStyle = '#000000';
-    //     ctx.lineWidth = w;
-    //     ctx.beginPath();
-    //     ctx.moveTo(before_x, before_y);
-    //     ctx.lineTo(x, y);
-    //     ctx.stroke();
-    //     ctx.closePath();
-    //     // 描画最後の座標を前回の座標に代入する
-    //     before_x = x;
-    //     before_y = y;
-    // }
-
     resetCanvas() {
         const ctx = this.getContext();
         ctx.clearRect(0, 0, ctx.canvas.clientWidth, ctx.canvas.clientHeight);
+        ctx.beginPath();
     }
 
     submission() {
