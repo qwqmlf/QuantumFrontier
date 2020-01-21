@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/QuantumFrontier/static/css/main.85b3a57b.chunk.css",
-    "main.js": "/QuantumFrontier/static/js/main.42557cb9.chunk.js",
-    "main.js.map": "/QuantumFrontier/static/js/main.42557cb9.chunk.js.map",
+    "main.css": "/QuantumFrontier/static/css/main.faecf17c.chunk.css",
+    "main.js": "/QuantumFrontier/static/js/main.d56d2e74.chunk.js",
+    "main.js.map": "/QuantumFrontier/static/js/main.d56d2e74.chunk.js.map",
     "runtime-main.js": "/QuantumFrontier/static/js/runtime-main.a9dbf75a.js",
     "runtime-main.js.map": "/QuantumFrontier/static/js/runtime-main.a9dbf75a.js.map",
     "static/js/2.e1fb1704.chunk.js": "/QuantumFrontier/static/js/2.e1fb1704.chunk.js",
     "static/js/2.e1fb1704.chunk.js.map": "/QuantumFrontier/static/js/2.e1fb1704.chunk.js.map",
     "index.html": "/QuantumFrontier/index.html",
-    "precache-manifest.004836d9322a7319be391032a9a16e8d.js": "/QuantumFrontier/precache-manifest.004836d9322a7319be391032a9a16e8d.js",
+    "precache-manifest.81550e45bbba531f31ab6ef241f374a6.js": "/QuantumFrontier/precache-manifest.81550e45bbba531f31ab6ef241f374a6.js",
     "service-worker.js": "/QuantumFrontier/service-worker.js",
-    "static/css/main.85b3a57b.chunk.css.map": "/QuantumFrontier/static/css/main.85b3a57b.chunk.css.map",
+    "static/css/main.faecf17c.chunk.css.map": "/QuantumFrontier/static/css/main.faecf17c.chunk.css.map",
     "static/js/2.e1fb1704.chunk.js.LICENSE": "/QuantumFrontier/static/js/2.e1fb1704.chunk.js.LICENSE",
     "static/media/blueblocks.jpeg": "/QuantumFrontier/static/media/blueblocks.8309987d.jpeg",
     "static/media/captainameria.jpg": "/QuantumFrontier/static/media/captainameria.a1e5ca28.jpg",
@@ -31,7 +31,7 @@
   "entrypoints": [
     "static/js/runtime-main.a9dbf75a.js",
     "static/js/2.e1fb1704.chunk.js",
-    "static/css/main.85b3a57b.chunk.css",
-    "static/js/main.42557cb9.chunk.js"
+    "static/css/main.faecf17c.chunk.css",
+    "static/js/main.d56d2e74.chunk.js"
   ]
 }
