@@ -1,10 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
+import CanvasArea from './CanvasArea.js';
 
-import ReactPlayer from 'react-player'
-import Canvas from './Canvas.js';
-
-import expVideo from '../Videos/exp.mp4';
 import handwritenum from '../img/0-9.png';
 
 const colors = {
@@ -63,7 +60,7 @@ const useStyles = makeStyles(theme => ({
             margin: '0px 80px'
         },
         [theme.breakpoints.down('xs')]: {
-            margin: '0px 40px',
+            margin: '0px 0px',
         },
         padding: '20px',
         textAlign: 'center',
@@ -72,9 +69,20 @@ const useStyles = makeStyles(theme => ({
     },
     canvasStyle: {
         background: colors.canvasBack,
-        width: '350px',
+        margin: '10px 260px',
+        [theme.breakpoints.down('lg')]: {
+            margin: '10px 200px',
+        },
+        [theme.breakpoints.down('md')]: {
+            margin: '10px 160px',
+        },
+        [theme.breakpoints.down('sm')]: {
+            margin: '10px 80px'
+        },
+        [theme.breakpoints.down('xs')]: {
+            margin: '10px 0px',
+        },
         padding: '20px',
-        margin: 'auto',
         textAlign: 'center',
         borderRadius: '5px 5px 5px 5px/5px 5px 5px 5px',
         border: 'solid 1px #696969',
@@ -89,6 +97,7 @@ const useStyles = makeStyles(theme => ({
     },
     video: {
         margin: '20px',
+        width: '100%',
     },
 }));
 
@@ -104,15 +113,6 @@ function MnistItem(){
                 <p>
                     <span>本プロジェクトにて開発された量子変分法を用いた教師あり学習アルゴリズムを用いた、手書き文字認識プログラムを体験することができます。</span>
                 </p>
-                <p>    
-                    <span></span>
-                    
-                </p>
-            </div>
-            <div className={classes.video}>
-                <center>
-                    <ReactPlayer url={expVideo} playing />
-                </center>
             </div>
 
             <div className={classes.stitleStyle}>
@@ -125,22 +125,23 @@ function MnistItem(){
                      <span>ボックス内でクリックした状態で書き込むことができます。</span>
                 </p>
             </div>
-            <div className={classes.canvasStyle}>
-                <Canvas />
-            </div>
-
-            <div className={classes.stitleStyle}>
-                <span>データセット：MNIST</span>
-            </div>
             <div className={classes.imgStyle}>
                 <img src={handwritenum} 
                     alt='mnistimg'　
                     align='center' 
                     style={{
-                        width: '40%',
-                        // margin: '0px 60px'
+                        width: '80%',
+                        margin: '0px 60px'
                     }} 
                 />  
+            </div>
+            
+            <div className={classes.canvasStyle}>
+                <CanvasArea />
+            </div>
+
+            <div className={classes.stitleStyle}>
+                <span>データセット：MNIST</span>
             </div>
             <div className={classes.itemStyle}>
                 <p>  

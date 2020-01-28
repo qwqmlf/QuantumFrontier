@@ -1,45 +1,16 @@
-import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-import DeleteIcon from '@material-ui/icons/Delete';
-import SendIcon from '@material-ui/icons/Send';
+import React, { Component } from 'react'
+
+import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 
 
-const colors = {
-    background: '#262626',
-    h1: '#fff',
-    text: '#fff',
-    icon: '#fff',
-    imgBack: '#fff',
-    canvasBack: '#444',
-    resetButton: '#ff5050',
-    sendButton: '#1a75ff',
-}
 
 const style = {
     canvas: {
         border: '1px solid gray',
         backgroundColor: 'white',
     },
-    resetButton: {
-        background: colors.resetButton,
-        color: colors.text,
-        margin: '10px',
-        padding: '10px',
-    },
-    sendButton: {
-        background: colors.sendButton,
-        color: colors.text,
-        margin: '20px',
-        padding: '10px',
-    },
-    icon: {
-        color: colors.icon,
-        margin: '0px 0px 0px 10px',
-    }
-};
-
-
-class Canvas extends Component {
+}
+export class Canvas extends Component {
     constructor() {
         super();
         this.state = { drawing: false };
@@ -75,37 +46,32 @@ class Canvas extends Component {
     }
 
     submission() {
-
+        // const ctx = this.getContext();
+        // ctx.toData
     }
-  render() {
-    return (
-        <div>
-            <canvas
-                ref="canvas"
-                width="300px"
-                height="300px"
-                onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
-                onMouseUp={() => this.endDrawing()}
-                onMouseLeave={() => this.endDrawing()}
-                onMouseMove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
-                style={style.canvas}
-            />
-        
-            <Button
-                style={style.resetButton}
-                onClick={()=> this.resetCanvas()}
-            >
-            Delete
-            <DeleteIcon fontSize="midium" style={style.icon}/> 
-            </Button>
-            <Button
-                style={style.sendButton}
-            >
-                Send
-                <SendIcon fontSize="midium" style={style.icon} />
-            </Button>
-        </div>
-    );
-  }
+
+    render() {
+        return (
+            <div>
+                <BrowserView>
+                    <canvas
+                            ref="canvas"
+                            width="300px"
+                            height="300px"
+                            onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                            // onMouseWheel={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                            onMouseUp={() => this.endDrawing()}
+                            onMouseLeave={() => this.endDrawing()}
+                            onMouseMove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                            style={style.canvas}
+                        />
+                </BrowserView>
+                <MobileView>
+
+                </MobileView>
+            </div>
+        )
+    }
 }
-export default Canvas;
+
+export default Canvas
