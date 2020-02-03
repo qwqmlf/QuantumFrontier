@@ -102,7 +102,18 @@ class CanvasArea extends Component {
                                 style={style.canvas}
                             />
                     </BrowserView>
-                    <MobileView>
+                    <MobileView>]
+                    <canvas
+                                ref="canvas"
+                                width="300px"
+                                height="300px"
+                                // onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                                onMouseWheel={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                                onMouseUp={() => this.endDrawing()}
+                                onMouseLeave={() => this.endDrawing()}
+                                onMouseMove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                                style={style.canvas}
+                            />
 
                     </MobileView>
                 </div>
