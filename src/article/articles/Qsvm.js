@@ -26,6 +26,7 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'left',
     },
     paragraph: {
+        fontSize: '16pt',
         marginBottom: '40px',
         margin: '30px',
         [theme.breakpoints.down('sm')]: {
@@ -33,6 +34,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
 }));
+
 
 
 function Qsvm(

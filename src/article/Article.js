@@ -21,7 +21,7 @@ import Footer from '../style/Footer.js';
 
 
 const colors = {
-    background: '#404040',
+    background: '#262626',
     h1: '#fff',
     text: '#fff',
     icon: '#BFBFBF',
@@ -80,14 +80,14 @@ function Article(){
                         <ArticleHeader />
                         <div className={classes.pageStyle}>
                             <Router history={history}>
-                                <Route exact path={'/article'} component={ArticleIntroduction}/>
-                                <Route path={'/article/qi_for_beginners1'} component={Qi_for_beginners1} />
-                                <Route path={'/article/qi_for_beginners2'} component={Qi_for_beginners2} />
-                                <Route path={'/article/qi_for_beginners3'} component={Qi_for_beginners3} />
-                                <Route path={'/article/introduction_of_qml'} component={Introduction_of_qml} />
-                                <Route path={'/article/application_of_qml'} component={Application_of_qml} />
-                                <Route path={'/article/qsvm'} component={Qsvm} />
-                                <Route path={'/article/qwnn_graph_classification'} component={Qwnn_graph_classification} />
+                                <Route exact path={'/QuantumFrontier/article'} component={ArticleIntroduction}/>
+                                <Route path={'/QuantumFrontier/article/qi_for_beginners1'} component={Qi_for_beginners1} />
+                                <Route path={'/QuantumFrontier/article/qi_for_beginners2'} component={Qi_for_beginners2} />
+                                <Route path={'/QuantumFrontier/article/qi_for_beginners3'} component={Qi_for_beginners3} />
+                                <Route path={'/QuantumFrontier/article/introduction_of_qml'} component={Introduction_of_qml} />
+                                <Route path={'/QuantumFrontier/article/application_of_qml'} component={Application_of_qml} />
+                                <Route path={'/QuantumFrontier/article/qsvm'} component={Qsvm} />
+                                <Route path={'/QuantumFrontier/article/qwnn_graph_classification'} component={Qwnn_graph_classification} />
                             </Router>
                         </div>
                         <div className={classes.cardStyle}>
