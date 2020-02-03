@@ -16,43 +16,43 @@ class ArticleCards extends Component {
                 title: 'QI for Beginners1',
                 description: 'QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。',
                 img: waveslid,
-                link: '/article/qi_for_beginners1'
+                link: '/QuantumFrontier/article/qi_for_beginners1'
             },
             {
                 title: 'QI for Beginners2',
                 description: 'QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。',
                 img: datacity,
-                link: '/article/qi_for_beginners2', 
+                link: '/QuantumFrontier/article/qi_for_beginners2', 
             },
             {
                 title: 'QI for Beginners3',
                 description: 'QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。',
                 img: qcarch,
-                link: '/article/qi_for_beginners3', 
+                link: '/QuantumFrontier/article/qi_for_beginners3', 
             },
             // {
             //     title: 'Introduction of QML',
             //     description: 'QMLの説明。QMLの説明。QMLの説明。QMLの説明。QMLの説明。QMLの説明。QMLの説明。QMLの説明。QMLの説明。QMLの説明。QMLの説明。QIBの説明。',
             //     img: junbi,
-            //     link: '/article/application_of_qml', 
+            //     link: '/QuantumFrontier/article/application_of_qml', 
             // },
             // {
             //     title: 'Introduction of Quantum Walk',
             //     description: 'QMLの説明。QMLの説明。QMLの説明。QMLの説明。QMLの説明。QMLの説明。QMLの説明。QMLの説明。QMLの説明。QMLの説明。QMLの説明。QIBの説明。',
             //     img: junbi,
-            //     link: '/article/introduction_of_qml', 
+            //     link: '/QuantumFrontier/article/introduction_of_qml', 
             // },
             // {
             //     title: 'QSVM',
             //     description: 'QSVMの説明。QSVMの説明。QSVMの説明。QSVMの説明。QSVMの説明。QSVMの説明。QSVMの説明。QSVMの説明。QSVMの説明。QSVMの説明。QSVMの説明',
             //     img: junbi,
-            //     link: '/article/qsvm', 
+            //     link: '/QuantumFrontier/article/qsvm', 
             // },
             {
                 title: 'Quantum Walk・Graph classification',
                 description: 'QWGCの説明。QWGCの説明。QWGCの説明。QWGCの説明。QWGCの説明。',
                 img: network,
-                link: '/article/qwnn_graph_classification', 
+                link: '/QuantumFrontier/article/qwnn_graph_classification', 
             },
         ]
     }

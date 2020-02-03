@@ -5,7 +5,6 @@ import MiniDrawer from '../style/MiniDrawer.js';
 import Footer from '../style/Footer.js';
 import TutorialHeader from './TutorialHeader';
 import TutorialItem from './TutorialItem'; 
-// import TutorialCard from './TutorialCard';
 
 const colors = {
     background: '#262626',

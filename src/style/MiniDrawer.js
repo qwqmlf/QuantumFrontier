@@ -171,7 +171,6 @@ function MiniDrawer() {
             variant="h6"
             noWrap
           >
-            {/* タイトル */}
             QML Frontier
           </Typography>
         </Toolbar>

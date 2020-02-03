@@ -1,9 +1,6 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import MobileStepper from '@material-ui/core/MobileStepper';
-import Button from '@material-ui/core/Button';
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+
 
 const articleStep = [
     Qwnn_graph_classification-1,
@@ -26,6 +23,7 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'left',
     },
     paragraph: {
+        fontSize: '16pt',
         marginBottom: '40px',
         margin: '30px',
         [theme.breakpoints.down('sm')]: {
@@ -59,6 +57,8 @@ function Qwnn_graph_classification(
                 <p>                
                     近年様々な場面においてグラフのデータの需要というものが高まってきています。例えば化学構造を判定する判定器や、ネットワークにおけるコミュニティ分析等様々に渡ります。
                     量子技術の関連で言うと、量子コンピュータにおける量子ビットをどのように接続するのか、といったものもグラフのデータの一種になります。
+                </p>
+                <p>
                     しかしながらこのようなグラフのデータというのは一般に処理が非常に重たいという特徴があります。例えばグラフを行列の形式で表した場合、1000個のノードを持つグラフであれば
                     1000×1000の行列を扱うことになります。大きなグラフになれば、数万から数十万ものノードを持つグラフを扱わなければなりません。そのような場合古典のコンピュータでは非常に
                     大きなメモリが必要となってしまうことに加えて、処理に非常に時間がかかります。また、近年様々な機械学習の技術が発展してきている中で、グラフのデータにおける機械学習ではまだ
@@ -124,26 +124,7 @@ function Qwnn_graph_classification(
                     そしてその結果からどれくらいのコストが存在するのかということを計算し、先ほどの回転角度のパラメーターに対してフィードバックを行います。
                 </p>
             </div>
-            <div>
-                <MobileStepper
-                    steps={maxSteps}
-                    position="static"
-                    variant="text"
-                    activeStep={activeStep}
-                    nextButton={
-                    <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-                        Next
-                        {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-                    </Button>
-                    }
-                    backButton={
-                    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                        {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-                        Back
-                    </Button>
-                    }
-                />
-            </div>
+
         </div>
     )
 }

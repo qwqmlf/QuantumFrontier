@@ -21,12 +21,22 @@ function App() {
       <Router history={history}>
       <ScrollToTop >
         <Route exact path={'/QuantumFrontier/'} component={Title}/>
+        <Route path={'/QuantumFrontier/home'} component={Home}/>
+        <Route path={'/QuantumFrontier/mnist'} component={Mnist} />
+        <Route path={'/QuantumFrontier/tutorial'} component={Tutorial}/>
+        <Route path={'/QuantumFrontier/article'} component={Article} />
+        <Route path={'/QuantumFrontier/project'} component={Project} />
+        <Route path={'/QuantumFrontier/member'} component={Member} />
+
+        {/* {/* local実行時用 */}
+        {/* <Route exact path={'/'} component={Title}/>
         <Route path={'/home'} component={Home}/>
         <Route path={'/mnist'} component={Mnist} />
         <Route path={'/tutorial'} component={Tutorial}/>
         <Route path={'/article'} component={Article} />
         <Route path={'/project'} component={Project} />
-        <Route path={'/member'} component={Member} />
+        <Route path={'/member'} component={Member} />  */}
+
         </ScrollToTop>
       </Router>
     </div>

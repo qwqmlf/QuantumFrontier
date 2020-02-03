@@ -68,11 +68,6 @@ function HomeItem(props){
 
             <HomeIndex />
             
-            {/* <div className={classes.itemStyle}>
-                <p>
-                    なんか補足説明いるかな...?
-                </p>
-            </div> */}
         </div>
     )
 }
