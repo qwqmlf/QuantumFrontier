@@ -81,7 +81,7 @@ const useStyles = makeStyles(theme => ({
 export default function ButtonBases() {
     const classes = useStyles();
     const handleTonNxtPage = () => {
-        history.push('QuantumFrontier/home')
+        history.push('/QuantumFrontier/home')
     }
     return (
         <div className={classes.root}>

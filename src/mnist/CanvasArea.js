@@ -43,7 +43,6 @@ const style = {
 };
 
 
-
 class CanvasArea extends Component {
 
     constructor() {

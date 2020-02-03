@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme =>({
 }));
 
 const handleToGroupPage = () => {
-    history.push('/member')
+    history.push('/QuantumFrontier/member')
 }
 
 

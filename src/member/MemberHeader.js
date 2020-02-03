@@ -61,7 +61,7 @@ const useStyles = makeStyles(theme => ({
 function MemberHeader() {
     const classes = useStyles();
     const handleToNextPage = () => {
-        history.push('/member')
+        history.push('/QuantumFrontier/member')
     }
 
     return (

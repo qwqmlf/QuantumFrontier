@@ -37,19 +37,19 @@ function IconList() {
 
     // swich button functions
     const handleToHomePage = () => {
-        history.push('/home')
+        history.push('/QuantumFrontier/home')
     }
     const handleToMnistPage = () => {
-        history.push('/mnist')
+        history.push('/QuantumFrontier/mnist')
     }
     const handleToCompetitionPage = () => {
-        history.push('/tutorial')
+        history.push('/QuantumFrontier/tutorial')
     }
     const handleToArticlePage = () => {
-        history.push('/article')
+        history.push('/QuantumFrontier/article')
     }
     const handleToProjectPage = () => {
-        history.push('/project')
+        history.push('/QuantumFrontier/project')
     }
 
     return (
@@ -79,12 +79,12 @@ function IconList() {
                     </ListItemIcon>
                     <ListItemText primary={'Web Article'} />
                 </ListItem>
-                <ListItem button key={'About project'} onClick={handleToProjectPage} >
+                {/* <ListItem button key={'About project'} onClick={handleToProjectPage} >
                     <ListItemIcon>
                     <LaptopMacIcon className={classes.iconButton} />
                     </ListItemIcon>
                     <ListItemText primary={'About project'} />
-                </ListItem>
+                </ListItem> */}
             </List>
         </div>
     )
