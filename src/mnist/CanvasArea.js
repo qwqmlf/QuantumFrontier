@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import DeleteIcon from '@material-ui/icons/Delete';
 import SendIcon from '@material-ui/icons/Send';
-import Canvas from './Canvas.js';
+import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 
 const colors = {
     background: '#262626',
@@ -43,31 +43,89 @@ const style = {
 };
 
 
+
 class CanvasArea extends Component {
 
-  render() {
-    return (
-        <div style={{margin:'auto'}}>
+    constructor() {
+        super();
+        this.state = { drawing: false };
+    }
 
-            <Canvas draw={}/>
+    getContext() {
+        return this.refs.canvas.getContext('2d');
+    }
 
-            <div style={style.buttonArea}>
-                <Button
-                    style={style.resetButton}
-                    onClick={()=> this.resetCanvas()}
-                >
-                    Delete
-                    <DeleteIcon fontSize="midium" style={style.icon}/> 
-                </Button>
-                <Button
-                    style={style.sendButton}
-                >
-                    Send
-                    <SendIcon fontSize="midium" style={style.icon} />
-                </Button>
+    startDrawing(x, y) {
+        this.setState({ drawing: true });
+        const ctx = this.getContext();
+        ctx.moveTo(x, y);
+    }
+
+    draw(x, y) {
+        if (!this.state.drawing) {
+            return;
+        }
+        const ctx = this.getContext();
+        ctx.lineTo(x, y);
+        ctx.stroke();
+    }
+
+    endDrawing() {
+        this.setState({ drawing: false });
+    }
+
+    resetCanvas() {
+        const ctx = this.getContext();
+        ctx.clearRect(0, 0, ctx.canvas.clientWidth, ctx.canvas.clientHeight);
+        ctx.beginPath();
+    }
+
+    submission() {
+        // const ctx = this.getContext();
+        // ctx.toData
+    }
+
+    render() {
+        return (
+            <div style={{margin:'auto'}}>
+
+                <div>
+                    <BrowserView>
+                        <canvas
+                                ref="canvas"
+                                width="300px"
+                                height="300px"
+                                onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                                // onMouseWheel={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                                onMouseUp={() => this.endDrawing()}
+                                onMouseLeave={() => this.endDrawing()}
+                                onMouseMove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                                style={style.canvas}
+                            />
+                    </BrowserView>
+                    <MobileView>
+
+                    </MobileView>
+                </div>
+
+                <div style={style.buttonArea}>
+                    <Button
+                        style={style.resetButton}
+                        onClick={()=> this.resetCanvas()}
+                    >
+                        Delete
+                        <DeleteIcon fontSize="midium" style={style.icon}/> 
+                    </Button>
+                    <Button
+                        style={style.sendButton}
+                        onClick = {() => this.submission()}
+                    >
+                        Send
+                        <SendIcon fontSize="midium" style={style.icon} />
+                    </Button>
+                </div>
             </div>
-        </div>
-    );
-  }
+        );
+    }
 }
 export default CanvasArea;
