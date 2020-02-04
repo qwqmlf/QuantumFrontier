@@ -1,10 +1,13 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import CanvasArea from './CanvasArea.js';
+import ResultTable from './ResultTable.js';
+
 import DeleteIcon from '@material-ui/icons/Delete';
 import Equalizer from '@material-ui/icons/Equalizer';
 
 import handwritenum from '../img/0-9.png';
+
 
 const colors = {
     background: '#262626',
@@ -23,6 +26,12 @@ const useStyles = makeStyles(theme => ({
         fontSize: '24pt', 
         [theme.breakpoints.down('sm')]: {
             fontSize: '26pt',
+            margin: '20px',
+            lineHeight: '46px', 
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: '0px', 
+            fontSize: '16pt',
         },
         fontWeight: 'bold',
         textAlign: 'left', 
@@ -34,6 +43,10 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('740')]: {
             margin: '10px 40px',
         },
+        [theme.breakpoints.down('xs')]: {
+            padding: '0px', 
+            margin: '20px',
+        },
         lineHeight: '46px', 
         fontSize: '16pt', 
         fontWeight: 'bold',
@@ -44,6 +57,9 @@ const useStyles = makeStyles(theme => ({
         margin: '10px 60px',
         [theme.breakpoints.down('740')]: {
             margin: '10px 40px',
+        },
+        [theme.breakpoints.down('xs')]: {
+            margin: '20px',
         },
         fontFamily: 'Quicksand YuGothic HiraginoKakuGothic Meiryo Osaka MSPGothic sansSerif', 
     }, 
@@ -68,10 +84,10 @@ const useStyles = makeStyles(theme => ({
         border: 'solid 1px #696969',
     },
     canvasStyle: {
-        // background: colors.canvasBack,
-        margin: '10px 260px',
         [theme.breakpoints.down('lg')]: {
             margin: '10px 200px',
+            margin: 'auto',
+
         },
         [theme.breakpoints.down('md')]: {
             margin: '10px 160px',
@@ -105,7 +121,7 @@ function MnistItem(){
             </div>
             <div className={classes.itemStyle}>
                 <p>
-                    <span>本プロジェクトにて開発された量子変分法を用いた教師あり学習アルゴリズムを用いた、手書き文字認識プログラムを体験することができます。</span>
+                    <span>本プロジェクトにて開発された量子変分法を用いて学習させた教師あり学習アルゴリズムをこの手書き文字認識プログラムで体験することができます。</span>
                 </p>
             </div>
 
@@ -144,15 +160,23 @@ function MnistItem(){
             </div>
             <div className={classes.itemStyle}>
                 <p>
-                     <span>実際に下のボックス内に数字を書き込んでみましょう！</span>
+                     <span>実際に下の白いボックス内に数字を書き込んでみましょう！</span>
                      <span>0〜９の中から好きな数字を選んでください。</span>
                      <span>ボックス内でクリックした状態で書き込むことができます。</span>
+
+                </p>
+                <p>
                      <span>やり直したい場合は、赤い<span style={{color: 'red', fontWeight:'bold'}}>Delete<DeleteIcon fontSize="small" /></span>ボタンで書き直すことができます。</span>
-                     <span>文字が書けたら、青い<span style={{color:'blue', fontWeight:'bold'}}>Predict<Equalizer fontSize="small" /></span>ボタンで学習済みモデルが予測した結果を表示します。</span>
+                     <span>文字が書けたら、青い<span style={{color:'blue', fontWeight:'bold'}}>Predict<Equalizer fontSize="small" /></span>ボタンで学習済みモデルが予測した結果を下に表示します。</span>
                 </p>
             </div>
             <div className={classes.canvasStyle}>
                 <CanvasArea />
+            </div>
+            <div className={classes.itemStyle}>
+                <p>
+                     <span>あなたが書いた文字は</span><ResultTable />
+               </p>
             </div>
 
         </div>

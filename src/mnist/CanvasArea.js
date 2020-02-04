@@ -88,7 +88,7 @@ class CanvasArea extends Component {
 
     render() {
         return (
-            <div style={{margin:'auto'}}>
+            <div>
                 <div>
                     <BrowserView>
                         <canvas
@@ -96,7 +96,6 @@ class CanvasArea extends Component {
                                 width="280px"
                                 height="280px"
                                 onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
-                                // onMouseWheel={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
                                 onMouseUp={() => this.endDrawing()}
                                 onMouseLeave={() => this.endDrawing()}
                                 onMouseMove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}

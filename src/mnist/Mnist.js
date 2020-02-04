@@ -63,7 +63,6 @@ function Mnist(){
           <MnistHeader />
           <div className={classes.MnistItems}>
             <MnistItem />
-            <ResultTable />
           </div>
         </div>
       </div>

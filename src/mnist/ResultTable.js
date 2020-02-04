@@ -1,24 +1,47 @@
-import React from 'react'
-import Accuracy from './Accuracy.js';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+
+
+const colors = {
+}
+
+
+const useStyles = makeStyles(theme => ({
+    table: {
+        fontSize: '24pt', 
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '26pt',
+            margin: '20px',
+            lineHeight: '46px', 
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: '0px', 
+            fontSize: '16pt',
+        },
+    }
+}));
 
 function ResultTable() {
+
+    const classes = useStyles();
+
     return (
-        <div>
+        <div className={classes.table}>
+
             <table className="table">
-                <thead>
-       
-                </thead>
                 <tbody>
-                <Accuracy no={0} />
-                <Accuracy no={1} />
-                <Accuracy no={2} />
-                <Accuracy no={3} />
-                <Accuracy no={4} />
-                <Accuracy no={5} />
-                <Accuracy no={6} />
-                <Accuracy no={7} />
-                <Accuracy no={8} />
-                <Accuracy no={9} />
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
