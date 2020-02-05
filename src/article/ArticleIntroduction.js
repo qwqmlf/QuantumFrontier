@@ -1,23 +1,44 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'; 
 
+
+const colors = {
+    background: '#262626',
+    h1: '#fff',
+    text: '#fff',
+    icon: '#BFBFBF',
+    imgBack: '#fff',
+}
+
 const useStyles = makeStyles(theme => ({
     titleStyle: {
+        color: colors.text,
         padding: '20px 0px 0px 20px', 
         margin: '40px',
         lineHeight: '46px', 
         fontSize: '24pt', 
         [theme.breakpoints.down('sm')]: {
             fontSize: '26pt',
+            margin: '20px',
+            lineHeight: '46px', 
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: '0px', 
+            fontSize: '16pt',
         },
         fontWeight: 'bold',
         textAlign: 'left', 
         borderBottom: 'groove 3px #C0C0C0', 
     }, 
     stitleStyle: { 
+        color: colors.text,
         margin: '10px 60px',
         [theme.breakpoints.down('740')]: {
             margin: '10px 40px',
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: '0px', 
+            margin: '20px',
         },
         lineHeight: '46px', 
         fontSize: '16pt', 
@@ -25,13 +46,36 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'left', 
     }, 
     itemStyle: {
+        color: colors.text,
         margin: '10px 60px',
         [theme.breakpoints.down('740')]: {
             margin: '10px 40px',
         },
-        fontSize: '14px',
+        [theme.breakpoints.down('xs')]: {
+            margin: '20px',
+        },
         fontFamily: 'Quicksand YuGothic HiraginoKakuGothic Meiryo Osaka MSPGothic sansSerif', 
     }, 
+    imgStyle: {
+        background: colors.imgBack,
+        margin: '0px 260px',
+        [theme.breakpoints.down('lg')]: {
+            margin: '0px 200px',
+        },
+        [theme.breakpoints.down('md')]: {
+            margin: '0px 160px',
+        },
+        [theme.breakpoints.down('sm')]: {
+            margin: '0px 80px'
+        },
+        [theme.breakpoints.down('xs')]: {
+            margin: '0px 0px',
+        },
+        padding: '20px',
+        textAlign: 'center',
+        borderRadius: '5px 5px 5px 5px/5px 5px 5px 5px',
+        border: 'solid 1px #696969',
+    },
     list: {
         padding: '10px',
         fontFamily: 'YuGothic',
@@ -61,7 +105,7 @@ function ArticleIntroduction() {
                     <span>Section1では量子コンピュータの基礎的な知識を簡単に解説しています。</span>
                     <span>１ぺージは「量子ビット」、考え中...。</span>
                     <span>続く２ぺージは「量子計算」の基礎的な範囲から</span>
-                    <span>そして３ぺージは「量子アルゴリズム」をテーマとし、代表的な「Shorのアルゴリズム」、「Groverのアルゴリズム」を中心に量子アルゴリズムによる量子加速や、さらには実現に向けた課題などについて解説しています。</span>
+                    <span>そして３ぺージは...</span>
                 </p>
                 <ul>
                     <li className={classes.list}>Quantum Information for Beginners 1</li>

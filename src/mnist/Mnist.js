@@ -5,7 +5,6 @@ import MiniDrawer from '../style/MiniDrawer.js';
 import Footer from '../style/Footer.js';
 import MnistHeader from './MnistHeader.js';
 import MnistItem from './MnistItem.js';
-import ResultTable from './ResultTable.js';
 
 const colors = {
   background: '#262626',
@@ -19,6 +18,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: '63px',
     marginLeft: '250px',
     marginRight: '10px',
+    fontSize: '14pt',
     [theme.breakpoints.down('md')]: {
         marginTop: '63px',
         marginLeft: '80px',
@@ -28,8 +28,8 @@ const useStyles = makeStyles(theme => ({
         marginTop: '55px',
         marginLeft: '57px',
         marginRight: '0px',
+        fontSize: '10pt',
     },
-    fontSize: '14pt',
   },
   content: {
     margin: 'auto',
@@ -63,6 +63,7 @@ function Mnist(){
           <MnistHeader />
           <div className={classes.MnistItems}>
             <MnistItem />
+
           </div>
         </div>
       </div>

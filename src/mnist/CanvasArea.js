@@ -81,6 +81,38 @@ class CanvasArea extends Component {
         ctx.beginPath();
     }
 
+
+    // getImageData() {
+    //     return new Promise(resolve => {
+    //       const ctx = this.getContext();
+    
+    //       const image = new Image();
+    //       const width = 28;
+    //       const height = 28;
+    
+    //       image.onload = () => {
+    //         ctx.drawImage(image, 0, 0, width, height);
+    //         const imageData = ctx.getImageData(0, 0, width, height);
+    
+    //         for (let i = 0; i < imageData.data.length; i += 4) {
+    //           const avg =
+    //             (imageData.data[i] +
+    //               imageData.data[i + 1] +
+    //               imageData.data[i + 2]) /
+    //             3;
+    //           imageData.data[i] = avg;
+    //           imageData.data[i + 1] = avg;
+    //           imageData.data[i + 2] = avg;
+    //         }
+    //         resolve(imageData);
+    //       };
+    
+    //       image.src = this.signaturePad.toDataURL();
+    //     });
+    //   }
+    
+
+
     predict() {
         // const ctx = this.getContext();
         // ctx.toData
