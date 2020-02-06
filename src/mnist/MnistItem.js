@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import CanvasArea from './CanvasArea.js';
-import ResultTable from './ResultTable.js';
+// import MNISTPredictionArea from './MNISTPredictionArea.js';
+import MNISTPredArea from './MNISTPredArea.js';
 
 import DeleteIcon from '@material-ui/icons/Delete';
 import Equalizer from '@material-ui/icons/Equalizer';
@@ -171,12 +171,9 @@ function MnistItem(){
                 </p>
             </div>
             <div className={classes.canvasStyle}>
-                <CanvasArea />
-            </div>
-            <div className={classes.itemStyle}>
-                <p>
-                     <span>あなたが書いた文字は</span><ResultTable />
-               </p>
+               {/* <MNISTPredictionArea  /> */}
+
+               <MNISTPredArea  />
             </div>
 
         </div>
