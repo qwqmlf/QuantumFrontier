@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/QuantumFrontier/static/css/main.a57ef304.chunk.css",
-    "main.js": "/QuantumFrontier/static/js/main.f93fef10.chunk.js",
-    "main.js.map": "/QuantumFrontier/static/js/main.f93fef10.chunk.js.map",
+    "main.js": "/QuantumFrontier/static/js/main.94e9cde6.chunk.js",
+    "main.js.map": "/QuantumFrontier/static/js/main.94e9cde6.chunk.js.map",
     "runtime-main.js": "/QuantumFrontier/static/js/runtime-main.a9dbf75a.js",
     "runtime-main.js.map": "/QuantumFrontier/static/js/runtime-main.a9dbf75a.js.map",
-    "static/js/2.197e7f8b.chunk.js": "/QuantumFrontier/static/js/2.197e7f8b.chunk.js",
-    "static/js/2.197e7f8b.chunk.js.map": "/QuantumFrontier/static/js/2.197e7f8b.chunk.js.map",
+    "static/js/2.2bbfe7b6.chunk.js": "/QuantumFrontier/static/js/2.2bbfe7b6.chunk.js",
+    "static/js/2.2bbfe7b6.chunk.js.map": "/QuantumFrontier/static/js/2.2bbfe7b6.chunk.js.map",
     "index.html": "/QuantumFrontier/index.html",
-    "precache-manifest.9bf7144a56de7c8c04849f4d0c37997f.js": "/QuantumFrontier/precache-manifest.9bf7144a56de7c8c04849f4d0c37997f.js",
+    "precache-manifest.993daac96909c430680b2dc734acb68c.js": "/QuantumFrontier/precache-manifest.993daac96909c430680b2dc734acb68c.js",
     "service-worker.js": "/QuantumFrontier/service-worker.js",
     "static/css/main.a57ef304.chunk.css.map": "/QuantumFrontier/static/css/main.a57ef304.chunk.css.map",
-    "static/js/2.197e7f8b.chunk.js.LICENSE": "/QuantumFrontier/static/js/2.197e7f8b.chunk.js.LICENSE",
+    "static/js/2.2bbfe7b6.chunk.js.LICENSE": "/QuantumFrontier/static/js/2.2bbfe7b6.chunk.js.LICENSE",
     "static/media/blueblocks.jpeg": "/QuantumFrontier/static/media/blueblocks.8309987d.jpeg",
     "static/media/captainameria.jpg": "/QuantumFrontier/static/media/captainameria.a1e5ca28.jpg",
     "static/media/code.jpeg": "/QuantumFrontier/static/media/code.191cf77b.jpeg",
@@ -29,8 +29,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.a9dbf75a.js",
-    "static/js/2.197e7f8b.chunk.js",
+    "static/js/2.2bbfe7b6.chunk.js",
     "static/css/main.a57ef304.chunk.css",
-    "static/js/main.f93fef10.chunk.js"
+    "static/js/main.94e9cde6.chunk.js"
   ]
 }
