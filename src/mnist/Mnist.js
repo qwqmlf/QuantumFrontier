@@ -18,6 +18,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: '63px',
     marginLeft: '250px',
     marginRight: '10px',
+    fontSize: '14pt',
     [theme.breakpoints.down('md')]: {
         marginTop: '63px',
         marginLeft: '80px',
@@ -27,6 +28,7 @@ const useStyles = makeStyles(theme => ({
         marginTop: '55px',
         marginLeft: '57px',
         marginRight: '0px',
+        fontSize: '10pt',
     },
   },
   content: {
@@ -50,6 +52,7 @@ const useStyles = makeStyles(theme => ({
 },
 }));
 
+
 function Mnist(){
   const classes = useStyles()
   return (
@@ -60,6 +63,7 @@ function Mnist(){
           <MnistHeader />
           <div className={classes.MnistItems}>
             <MnistItem />
+
           </div>
         </div>
       </div>
