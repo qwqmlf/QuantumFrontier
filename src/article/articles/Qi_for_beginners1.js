@@ -153,6 +153,9 @@ function Qi_for_beginners1() {
                 なお複数の量子の状態を表す時、$\vert }$の中に複数の状態を入れることもできます。
                 例えば、$\vert \rangle $の量子ビットが二つあった時、$\vert 0\rangle $のように表現することができます。
             </p>
+            <p>
+                
+            </p>
             </div>
 
         </div>

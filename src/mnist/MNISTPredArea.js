@@ -6,6 +6,7 @@ import { BrowserView, MobileView } from 'react-device-detect';
 
 import PredictionArea from './PredictionArea.js';
 
+import axios from 'axios';
 
 const colors = {
     background: '#262626',
@@ -119,21 +120,37 @@ export class MNISTPredArea extends Component {
         });
       }
 
-    // jsonから予測結果を引っ張ってくる
-    componentDidMount(){
+    // // // jsonから予測結果を引っ張ってくる
+    // componentDidMount(){
+    //     console.log('jjjjjjjjjjjjjjjjjj')
+    //     return fetch('/QuantumFrontier/mnist/text')
+    //         .then((response) => response.json())
+    //         .then((predictedJson) => {
+    //             this.setState({
+    //                 drawing: false, 
+    //                 isPredicted: true, 
+    //                 data: predictedJson,
+    //             });
+    //     })
+    //     .catch((error) =>{
+    //         console.error(error);
+    //     });
+    // }
+
+    // // jsonから予測結果を引っ張ってくる
+    resultGet(){
         console.log('jjjjjjjjjjjjjjjjjj')
-        return fetch('/QuantumFrontier/mnist/text')
-            .then((response) => response.json())
-            .then((predictedJson) => {
+        axios.get('/QuantumFrontier/mnist/text')
+            .then((res) => {
+                const result = res.data;
                 this.setState({
                     drawing: false, 
                     isPredicted: true, 
-                    data: predictedJson,
-                });
-        })
-        .catch((error) =>{
-            console.error(error);
-        });
+                    data: result,
+                }, 
+                console.log(result)
+                );
+            })
     }
 
     render() {
@@ -182,7 +199,7 @@ export class MNISTPredArea extends Component {
                             predict
                             <EqualizerIcon fontSize="midium" 
                                 style={style.icon}
-                                onClick={()=> this.componentDidMount()}
+                                onClick={()=> this.resultGet()}
                             />
                         </Button>
                     </BrowserView>
@@ -199,7 +216,7 @@ export class MNISTPredArea extends Component {
                         </Button>
                         <Button
                             style={style.predictButton}
-                            onClick={()=> this.componentDidMount()}
+                            onClick={()=> this.resultGet()}
                         >
                             predict
                             <EqualizerIcon fontSize="midium" style={style.icon} />
