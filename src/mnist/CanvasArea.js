@@ -48,33 +48,31 @@ class CanvasArea extends Component {
     render() {
         return (
             <div>
-                <div>
-                    <BrowserView>
-                        <canvas
-                            ref={this.props.canvasProp.ref}
-                            width={this.props.canvasProp.width}
-                            height={this.props.canvasProp.height}
-                            onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
-                            onMouseUp={() => this.endDrawing()}
-                            onMouseLeave={() => this.endDrawing()}
-                            onMouseMove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
-                            style={style.canvas}
-                            />
-                    </BrowserView>
-
-                    <MobileView>
-                        <canvas
-                            ref="canvas"
-                            width={ window.innerWidth/2 }
-                            height={ window.innerWidth/2 }
-                            onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
-                            onMouseUp={() => this.endDrawing()}
-                            onMouseLeave={() => this.endDrawing()}
-                            onMouseMove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
-                            style={style.canvas}
+                <BrowserView>
+                    <canvas
+                        ref={this.props.canvasProp.ref}
+                        width={this.props.canvasProp.width}
+                        height={this.props.canvasProp.height}
+                        onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                        onMouseUp={() => this.endDrawing()}
+                        onMouseLeave={() => this.endDrawing()}
+                        onMouseMove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                        style={style.canvas}
                         />
-                    </MobileView>
-                </div>
+                </BrowserView>
+
+                <MobileView>
+                    <canvas
+                        ref="canvas"
+                        width={ window.innerWidth/2 }
+                        height={ window.innerWidth/2 }
+                        onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                        onMouseUp={() => this.endDrawing()}
+                        onMouseLeave={() => this.endDrawing()}
+                        onMouseMove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                        style={style.canvas}
+                    />
+                </MobileView>
             </div>
         );
     }

@@ -86,7 +86,6 @@ const useStyles = makeStyles(theme => ({
     canvasStyle: {
         [theme.breakpoints.down('lg')]: {
             margin: '10px 200px',
-            margin: 'auto',
 
         },
         [theme.breakpoints.down('md')]: {

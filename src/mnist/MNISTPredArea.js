@@ -6,7 +6,11 @@ import { BrowserView, MobileView } from 'react-device-detect';
 
 import PredictionArea from './PredictionArea.js';
 
-import axios from 'axios';
+import { pyodide } from 'pyodide-loader';
+ 
+// import axios from 'axios';
+
+import{ Helmet } from 'react-helmet';
 
 const colors = {
     background: '#262626',
@@ -91,74 +95,70 @@ export class MNISTPredArea extends Component {
         ctx.beginPath();
     }
 
-    getImageData() {
-        return new Promise(resolve => {
-          const ctx = this.getContext();
-    
-          const image = new Image();
-          const width = 28;
-          const height = 28;
-    
-          image.onload = () => {
-            ctx.drawImage(image, 0, 0, width, height);
-            const imageData = ctx.getImageData(0, 0, width, height);
-    
-            for (let i = 0; i < imageData.data.length; i += 4) {
-              const avg =
-                (imageData.data[i] +
-                  imageData.data[i + 1] +
-                  imageData.data[i + 2]) /
-                3;
-              imageData.data[i] = avg;
-              imageData.data[i + 1] = avg;
-              imageData.data[i + 2] = avg;
-            }
-            resolve(imageData);
-          };
-    
-          image.src = this.signaturePad.toDataURL();
-        });
-      }
-
-    // // // jsonから予測結果を引っ張ってくる
-    // componentDidMount(){
-    //     console.log('jjjjjjjjjjjjjjjjjj')
-    //     return fetch('/QuantumFrontier/mnist/text')
-    //         .then((response) => response.json())
-    //         .then((predictedJson) => {
-    //             this.setState({
-    //                 drawing: false, 
-    //                 isPredicted: true, 
-    //                 data: predictedJson,
-    //             });
-    //     })
-    //     .catch((error) =>{
-    //         console.error(error);
-    //     });
-    // }
 
     // // jsonから予測結果を引っ張ってくる
-    resultGet(){
-        console.log('jjjjjjjjjjjjjjjjjj')
-        axios.get('/QuantumFrontier/mnist/text')
-            .then((res) => {
-                const result = res.data;
-                this.setState({
-                    drawing: false, 
-                    isPredicted: true, 
-                    data: result,
-                }, 
-                console.log(result)
+    // resultGet(){
+    //     let numberImage = document.getElementById("canvas")
+    //     let encodedImage = numberImage.toDataURL();
+
+    //     console.log('jjjjjjjjjjjjjjjjjj')
+    //     axios.post('203.178.135.229:3000', { params: {encodedImage}})
+    //         // .then((res) => {
+    //         //     const result = res.data;
+    //         //     this.setState({
+    //         //         drawing: false, 
+    //         //         isPredicted: true, 
+    //         //         data: result,
+    //         //     }, 
+    //         //     console.log(result)
+    //         //     );
+    //         // })
+    //     axios.get('203.178.135.229:3000')
+    //     .then((res) => {
+
+    //         console.log(res)
+    //         // const result = res.data;
+    //         // this.setState({
+    //         //     drawing: false, 
+    //         //     isPredicted: true, 
+    //         //     data: result,
+    //         // }, 
+    //         // console.log(result)
+    //         // );
+    //         })
+    // }
+    
+    resultGet() {
+
+        languagePluginLoader.then(() => {
+            pyodide.loadPackage(['matplotlib']).then(() => {
+                pyodide.runPython(`
+                      import matplotlib.pyplot as plt
+                      import io, base64
+                      fig, ax = plt.subplots()
+                      ax.plot([1,3,2])
+                      buf = io.BytesIO()
+                      fig.savefig(buf, format='png')
+                      buf.seek(0)
+                      img_str = 'data:image/png;base64,' + base64.b64encode(buf.read()).decode('UTF-8')`
                 );
-            })
+      
+                document.getElementById("pyplotfigure").src=pyodide.globals.img_str
+      
+            });});
     }
 
     render() {
         return (
             <div>
+                <Helmet >
+                    <script src="https://pyodide.cdn.iodide.io/pyodide.js"></script>
+                </Helmet>
+
                 <div>
                     <BrowserView>
                         <canvas
+                            id='canvas'
                             ref='canvas'
                             width="300px"
                             height="300px"
@@ -195,11 +195,11 @@ export class MNISTPredArea extends Component {
                         </Button>
                         <Button
                             style={style.predictButton}
+                            onClick={()=> this.resultGet()}
                         >
                             predict
                             <EqualizerIcon fontSize="midium" 
                                 style={style.icon}
-                                onClick={()=> this.resultGet()}
                             />
                         </Button>
                     </BrowserView>
