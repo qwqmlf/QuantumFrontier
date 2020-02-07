@@ -10,7 +10,6 @@ const colors = {
 }
 const useStyles = makeStyles(theme => ({
     root: {
-        height: '200px',
         position: 'relative',
         bottom: '0',
         marginTop: '100px', 
@@ -25,7 +24,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     content: {
-        height: '750px',
+        height: '1000px',
         background: colors.background, 
         paddingTop: '140px', 
         textAlign: 'center',
@@ -95,22 +94,24 @@ function Footer() {
                     <br />
                     <br />
                     <br />
+                    <span>お問い合わせ</span>
+                    <br/>
+                    <a href="mailto:parton@sfc.wide.ad.jp" className={classes.link}> mailto:parton@sfc.wide.ad.jp</a>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <div className={classes.imgspace}>
+                    <img
+                        src={member}
+                        className={classes.img}
+                    />
+                    </div>
                 </div>
-                <br />
-                <br />
             </div>
-            <div className={classes.imgspace}>
-                <img
-                    src={member}
-                    className={classes.img}
-                />
-            </div>
-            <div className={classes.bottom}>
-                {/* &copy; */}
-                <span>お問い合わせ</span>
-                <br/>
-                <a href="mailto:parton@sfc.wide.ad.jp" className={classes.link}> mailto:parton@sfc.wide.ad.jp</a>
-            </div>
+            
         </div>
     )
 }

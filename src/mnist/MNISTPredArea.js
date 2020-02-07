@@ -5,12 +5,10 @@ import EqualizerIcon from '@material-ui/icons/Equalizer';
 import { BrowserView, MobileView } from 'react-device-detect';
 
 import PredictionArea from './PredictionArea.js';
-
-import { pyodide } from 'pyodide-loader';
- 
-// import axios from 'axios';
-
+import axios from 'axios';
 import{ Helmet } from 'react-helmet';
+// import languagePluginLoader from './pyodide';
+
 
 const colors = {
     background: '#262626',
@@ -61,6 +59,7 @@ export class MNISTPredArea extends Component {
             drawing: false, 
             isPredicted: false, 
         };
+        
     }
 
     // canvas
@@ -96,63 +95,59 @@ export class MNISTPredArea extends Component {
     }
 
 
-    // // jsonから予測結果を引っ張ってくる
-    // resultGet(){
-    //     let numberImage = document.getElementById("canvas")
-    //     let encodedImage = numberImage.toDataURL();
+    // jsonから予測結果を引っ張ってくる
+    resultGet(){
+        let numberImage = document.getElementById("canvas")
+        let encodedImage = numberImage.toDataURL();
 
-    //     console.log('jjjjjjjjjjjjjjjjjj')
-    //     axios.post('203.178.135.229:3000', { params: {encodedImage}})
-    //         // .then((res) => {
-    //         //     const result = res.data;
-    //         //     this.setState({
-    //         //         drawing: false, 
-    //         //         isPredicted: true, 
-    //         //         data: result,
-    //         //     }, 
-    //         //     console.log(result)
-    //         //     );
-    //         // })
-    //     axios.get('203.178.135.229:3000')
-    //     .then((res) => {
+        console.log('jjjjjjjjjjjjjjjjjj')
+        console.log(encodedImage)
+        
+        axios.post('/QuantumFrontier/', { params: {encodedImage}})
+            // .then((res) => {
+            //     const result = res.data;
+            //     this.setState({
+            //         drawing: false, 
+            //         isPredicted: true, 
+            //         data: result,
+            //     }, 
+            //     console.log(result)
+            //     );
+            // })
+        axios.get('/QuantumFrontier/')
+        .then((res) => {
 
-    //         console.log(res)
-    //         // const result = res.data;
-    //         // this.setState({
-    //         //     drawing: false, 
-    //         //     isPredicted: true, 
-    //         //     data: result,
-    //         // }, 
-    //         // console.log(result)
-    //         // );
-    //         })
-    // }
-    
-    resultGet() {
-
-        languagePluginLoader.then(() => {
-            pyodide.loadPackage(['matplotlib']).then(() => {
-                pyodide.runPython(`
-                      import matplotlib.pyplot as plt
-                      import io, base64
-                      fig, ax = plt.subplots()
-                      ax.plot([1,3,2])
-                      buf = io.BytesIO()
-                      fig.savefig(buf, format='png')
-                      buf.seek(0)
-                      img_str = 'data:image/png;base64,' + base64.b64encode(buf.read()).decode('UTF-8')`
-                );
-      
-                document.getElementById("pyplotfigure").src=pyodide.globals.img_str
-      
-            });});
+            console.log(res)
+            // const result = res.data;
+            // this.setState({
+            //     drawing: false, 
+            //     isPredicted: true, 
+            //     data: result,
+            // }, 
+            // console.log(result)
+            // );
+            })
     }
+ 
+    // resultGet() {
+
+    //     languagePluginLoader.then(() => {
+    //         pyodide.loadPackage(['matplotlib']).then(() => {
+    //             pyodide.runPython(`
+    //                   import numpy as np
+    //                   pi = np.pi`
+    //             );
+      
+    //             // document.getElementById("pyplotfigure").src=pyodide.globals.img_str
+      
+    //         });});
+    // }
 
     render() {
         return (
             <div>
                 <Helmet >
-                    <script src="https://pyodide.cdn.iodide.io/pyodide.js"></script>
+                    <script src="https://extremely-alpha.iodide.app/pyodide-0.8.1/pyodide.js"></script>
                 </Helmet>
 
                 <div>

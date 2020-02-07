@@ -77,9 +77,9 @@ function CardItems(props) {
                     </CardContent>
                 </CardActionArea>
                 <CardActions className={classes.button}>
-                    <Button size="small" color="primary">
+                    {/* <Button size="small" color="primary">
                         Share
-                    </Button>
+                    </Button> */}
                     <Button size="small" color="primary" onClick={handleTonNxtPage}>
                         Learn More
                     </Button>
