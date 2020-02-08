@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/QuantumFrontier/precache-manifest.b9fe945a827bfd68ad53e6728fb49707.js"
+  "/QuantumFrontier/precache-manifest.5256016e391dc76dfc4602755b2f84e5.js"
 );
 
 self.addEventListener('message', (event) => {
