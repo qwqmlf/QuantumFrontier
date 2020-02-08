@@ -18,29 +18,31 @@ const colors = {
 
 const useStyles = makeStyles(theme => ({
     root: {
-        marginTop: '63px',
-        marginLeft: '250px',
-        marginRight: '10px',
-        [theme.breakpoints.down('md')]: {
-            marginTop: '63px',
-            marginLeft: '80px',
-            marginRight: '10px',
-        },
-        [theme.breakpoints.down('xs')]: {
-            marginTop: '55px',
-            marginLeft: '57px',
-            marginRight: '0px',
-        },
+      marginTop: '63px',
+      marginLeft: '250px',
+      marginRight: '10px',
+      fontSize: '14pt',
+      [theme.breakpoints.down('md')]: {
+          marginTop: '63px',
+          marginLeft: '80px',
+          marginRight: '10px',
+      },
+      [theme.breakpoints.down('xs')]: {
+          marginTop: '55px',
+          marginLeft: '57px',
+          marginRight: '0px',
+          fontSize: '12pt',
+      },
     },
     content: {
-        margin: 'auto',
+      margin: 'auto',
+      width: '100%',
+      [theme.breakpoints.down('sm')]: {
         width: '100%',
-        [theme.breakpoints.down('sm')]: {
-          width: '100%',
-        },
-        marginBottom: '20px',
-        borderRadius: '5px 5px 5px 5px/5px 5px 5px 5px',
-        fontFamily: 'Quicksand 游ゴシック体 YuGothic ヒラギノ角ゴシックPro HiraginoKakuGothicPro メイリオ Meiryo Osaka ＭＳＰゴシック MSPGothic sansSerif',
+      },
+      marginBottom: '20px',
+      borderRadius: '5px 5px 5px 5px/5px 5px 5px 5px',
+      fontFamily: 'Quicksand 游ゴシック体 YuGothic ヒラギノ角ゴシックPro HiraginoKakuGothicPro メイリオ Meiryo Osaka ＭＳＰゴシック MSPGothic sansSerif',
     },
     homeItems: {
         background: colors.background,

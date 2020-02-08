@@ -66,6 +66,7 @@ const useStyles = makeStyles(theme => ({
     imgStyle: {
         background: colors.imgBack,
         margin: '0px 260px',
+        padding: '20px',
         [theme.breakpoints.down('lg')]: {
             margin: '0px 200px',
         },
@@ -77,8 +78,9 @@ const useStyles = makeStyles(theme => ({
         },
         [theme.breakpoints.down('xs')]: {
             margin: '0px 0px',
+            padding: '0px',
         },
-        padding: '20px',
+        
         textAlign: 'center',
         borderRadius: '5px 5px 5px 5px/5px 5px 5px 5px',
         border: 'solid 1px #696969',
@@ -145,7 +147,6 @@ function MnistItem(){
                     align='center' 
                     style={{
                         width: '80%',
-                        margin: '0px 60px'
                     }} 
                 />  
             </div>

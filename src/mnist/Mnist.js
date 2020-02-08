@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
         marginTop: '55px',
         marginLeft: '57px',
         marginRight: '0px',
-        fontSize: '10pt',
+        fontSize: '12pt',
     },
   },
   content: {

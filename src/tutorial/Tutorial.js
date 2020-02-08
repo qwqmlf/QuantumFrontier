@@ -15,19 +15,21 @@ const colors = {
 
 const useStyles = makeStyles(theme => ({
     root: {
-        marginTop: '63px',
-        marginLeft: '250px',
-        marginRight: '10px',
-        [theme.breakpoints.down('md')]: {
-            marginTop: '63px',
-            marginLeft: '80px',
-            marginRight: '10px',
-        },
-        [theme.breakpoints.down('xs')]: {
-            marginTop: '55px',
-            marginLeft: '57px',
-            marginRight: '0px',
-        },
+      marginTop: '63px',
+      marginLeft: '250px',
+      marginRight: '10px',
+      fontSize: '14pt',
+      [theme.breakpoints.down('md')]: {
+          marginTop: '63px',
+          marginLeft: '80px',
+          marginRight: '10px',
+      },
+      [theme.breakpoints.down('xs')]: {
+          marginTop: '55px',
+          marginLeft: '57px',
+          marginRight: '0px',
+          fontSize: '12pt',
+      },
     },
     content: {
       margin: 'auto',

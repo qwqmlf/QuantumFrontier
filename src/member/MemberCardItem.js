@@ -29,13 +29,19 @@ const useStyles = makeStyles(theme =>({
             display: 'block',
         },
     },
+    imgStyle: {
+        margin: '10px',
+        [theme.breakpoints.down('xs')]: {
+            margin: '10px auto'
+        },
+    },
     img: {
         width: '300px',
         height: '400px',
         objectFit: 'contain',
         [theme.breakpoints.down('xs')]: {
-            width: '300px',
-            height: '200px',
+            width: '150px',
+            height: '150px',
         },
     },
     description: {
@@ -67,10 +73,12 @@ function MenberCardItem(props) {
 
     return (
         <div className={classes.contentStyle}>
-            <img src={props.item.img} 
-                alt='image'　
-                className={classes.img}
-            />
+            <div className={classes.imgStyle}>
+                <img src={props.item.img} 
+                    alt='image'　
+                    className={classes.img}
+                />
+            </div>
             <div className={classes.description}>
                 <div className={classes.name}>
                     {props.item.name}
