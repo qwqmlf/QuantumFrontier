@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/QuantumFrontier/static/css/main.a8d4d237.chunk.css",
-    "main.js": "/QuantumFrontier/static/js/main.dfe1bdf4.chunk.js",
-    "main.js.map": "/QuantumFrontier/static/js/main.dfe1bdf4.chunk.js.map",
+    "main.js": "/QuantumFrontier/static/js/main.eac5451d.chunk.js",
+    "main.js.map": "/QuantumFrontier/static/js/main.eac5451d.chunk.js.map",
     "runtime-main.js": "/QuantumFrontier/static/js/runtime-main.a9dbf75a.js",
     "runtime-main.js.map": "/QuantumFrontier/static/js/runtime-main.a9dbf75a.js.map",
     "static/css/2.9a9f3aab.chunk.css": "/QuantumFrontier/static/css/2.9a9f3aab.chunk.css",
     "static/js/2.090970f0.chunk.js": "/QuantumFrontier/static/js/2.090970f0.chunk.js",
     "static/js/2.090970f0.chunk.js.map": "/QuantumFrontier/static/js/2.090970f0.chunk.js.map",
     "index.html": "/QuantumFrontier/index.html",
-    "precache-manifest.43192c1e382dd79614d2a3961ff14d3b.js": "/QuantumFrontier/precache-manifest.43192c1e382dd79614d2a3961ff14d3b.js",
+    "precache-manifest.db918cceba46adaa3b1781075e8eff98.js": "/QuantumFrontier/precache-manifest.db918cceba46adaa3b1781075e8eff98.js",
     "service-worker.js": "/QuantumFrontier/service-worker.js",
     "static/css/2.9a9f3aab.chunk.css.map": "/QuantumFrontier/static/css/2.9a9f3aab.chunk.css.map",
     "static/css/main.a8d4d237.chunk.css.map": "/QuantumFrontier/static/css/main.a8d4d237.chunk.css.map",
@@ -48,6 +48,6 @@
     "static/css/2.9a9f3aab.chunk.css",
     "static/js/2.090970f0.chunk.js",
     "static/css/main.a8d4d237.chunk.css",
-    "static/js/main.dfe1bdf4.chunk.js"
+    "static/js/main.eac5451d.chunk.js"
   ]
 }
