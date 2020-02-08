@@ -57,7 +57,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-function TutorialItem() {
+function QWGraphClassifier() {
     const classes = useStyles();
     
     return (
@@ -88,15 +88,12 @@ function TutorialItem() {
                     <span>このデータセットを用いて、グラフ分類のための量子機械学習アルゴリズムの解説を行なっていきます。</span>
                 </p>
             </div>
-            <div className={classes.titleStyle}>
-                <span>Tutorial</span>
-            </div>
 
             <div className={classes.gistStyle}>
-                <Gist url='https://gist.github.com/rum-yasuhiro/1af8dfcf98a8a98beda4770b5e24f468' />
+                <Gist url='https://gist.github.com/rum-yasuhiro/7b81d8c653537437ed6e79b6d7ebede6' />
             </div>
         </div>
     )
 }
 
-export default TutorialItem;
+export default QWGraphClassifier;
