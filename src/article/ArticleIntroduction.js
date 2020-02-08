@@ -107,7 +107,6 @@ function ArticleIntroduction() {
                 </p>
                 <ul>
                     <li className={classes.list}>量子コンピュータ基礎</li>
-                    {/* <li className={classes.list}>量子コンピュータ基礎２</li> */}
                 </ul>
             </div>
             <div className={classes.stitleStyle}>
@@ -119,7 +118,7 @@ function ArticleIntroduction() {
                 </p>
                 <ul>        
                     {/* <li className={classes.list}>Introduction of Quantum Machine Learning</li> */}
-                    <li className={classes.list}>Application of Quantum Machine Learning</li>
+                    <li className={classes.list}>量子ウォーク</li>
                 </ul>
             </div>
             <div className={classes.stitleStyle}>
@@ -131,7 +130,7 @@ function ArticleIntroduction() {
                 </p>
                 <ul>
                     {/* <li className={classes.list}>Quantum Support Vector Machine</li> */}
-                    <li className={classes.list}>Quantum Walk and Graph classification</li>
+                    <li className={classes.list}>量子ウォークグラフ分類アルゴリズム</li>
                 </ul>
             </div>
         </div>

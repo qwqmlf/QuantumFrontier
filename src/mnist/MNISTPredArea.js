@@ -67,6 +67,36 @@ export class MNISTPredArea extends Component {
         return this.refs.canvas.getContext('2d');
     }
 
+    
+    touchStartDrawing(x, y) {
+        this.setState({ drawing: true });
+        const ctx = this.getContext();
+
+        this.refs.canvas.addEventListener('touchmove', function(event) {
+            for (var i = 0; i < event.touches.length; i++) {
+                var touch = event.touches[i];
+                ctx.lineWidth = 15;
+                ctx.lineCap = "round";
+                ctx.moveTo(x, y);
+            }
+          }, false);
+    }
+
+    touchDraw(x, y) {
+        if (!this.state.drawing) {
+            return;
+        }
+        const ctx = this.getContext();
+        this.refs.canvas.addEventListener('touchmove', function(event) {
+            for (var i = 0; i < event.touches.length; i++) {
+                var touch = event.touches[i];
+                ctx.lineTo(x, y);
+                ctx.stroke();
+            }
+          }, false);
+    }
+
+
     startDrawing(x, y) {
         this.setState({ drawing: true });
         const ctx = this.getContext();

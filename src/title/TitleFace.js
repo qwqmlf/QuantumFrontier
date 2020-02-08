@@ -22,6 +22,10 @@ const useStyles = makeStyles(theme => ({
             fontSize: '80px',
             fontWeight: 'bold',
         },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '60px',
+            fontWeight: 'bold',
+        },
     },
     linkcard: {
         maxWidth: '100%', 
