@@ -2,31 +2,85 @@ import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 
-const articleStep = [
-    Qwnn_graph_classification-1,
-    Qwnn_graph_classification-2,
-    Qwnn_graph_classification-3,
-    Qwnn_graph_classification-4,
-]
+const colors = {
+    background: '#262626',
+    h1: '#fff',
+    text: '#fff',
+    icon: '#BFBFBF',
+    imgBack: '#fff',
+}
 
 const useStyles = makeStyles(theme => ({
     title: {
-        padding: '20px',
-        lineHeight: '46px',
-        fontSize: 'x-large',
-        textAlign: 'left',
-        borderBottom: 'groove 3px #C0C0C0',
+        color: colors.text,
+        padding: '20px 0px 0px 20px', 
+        margin: '40px',
+        lineHeight: '46px', 
+        fontSize: '24pt', 
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '26pt',
+            margin: '20px',
+            lineHeight: '46px', 
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: '0px', 
+            fontSize: '16pt',
+        },
+        fontWeight: 'bold',
+        textAlign: 'left', 
+        borderBottom: 'groove 3px #C0C0C0', 
+    }, 
+    stitle: { 
+        color: colors.text,
+        margin: '10px',
+        [theme.breakpoints.down('740')]: {
+            margin: '10px 40px',
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: '0px', 
+            margin: '20px',
+        },
+        lineHeight: '46px', 
+        fontSize: '16pt', 
+        fontWeight: 'bold',
+        textAlign: 'left', 
+    }, 
+    itemStyle: {
+        color: colors.text,
+        margin: '10px 60px',
+        [theme.breakpoints.down('740')]: {
+            margin: '10px 40px',
+        },
+        [theme.breakpoints.down('xs')]: {
+            margin: '20px',
+        },
+        fontFamily: 'Quicksand YuGothic HiraginoKakuGothic Meiryo Osaka MSPGothic sansSerif', 
+    }, 
+    imgStyle: {
+        background: colors.imgBack,
+        textAlign: 'center',
+        margin: '0px auto',
+        padding: 'auto',
     },
-    stitle: {
+    list: {
         padding: '10px',
-        fontSize: 'large',
-        textAlign: 'left',
+        fontFamily: 'YuGothic',
+        fontWeight: 'bold',
+    },
+    img: {
+        width: "600px",
+        [theme.breakpoints.down('sm')]: {
+            width: "400px",
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: "200px",
+        },
     },
     paragraph: {
         fontSize: '16pt',
         marginBottom: '40px',
-        margin: '30px',
-        [theme.breakpoints.down('sm')]: {
+        margin: '60px',
+        [theme.breakpoints.down('xs')]: {
             margin: '10px',
         },
     },
@@ -36,17 +90,6 @@ const useStyles = makeStyles(theme => ({
 function Qwnn_graph_classification(
 ) {
     const classes = useStyles();
-    const theme = useTheme();
-    const [activeStep, setActiveStep] = React.useState(0);
-    const maxSteps = articleStep.length;
-
-    function handleNext() {
-        setActiveStep(prevActiveStep => prevActiveStep + 1);
-    }
-
-    function handleBack() {
-        setActiveStep(prevActiveStep => prevActiveStep - 1);
-    }
 
     return (
         <div>

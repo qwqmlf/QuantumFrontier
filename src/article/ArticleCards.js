@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import CardItems from '../style/CardItems';
-import junbi from '../img/junbi.png';
 
 import waveslid from '../img/waveslid.jpg';
 import datacity from '../img/datacity.jpg';
@@ -13,22 +12,22 @@ class ArticleCards extends Component {
     state = {
         items: [
             {
-                title: 'QI for Beginners1',
-                description: 'QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。',
+                title: '量子コンピュータ基礎',
+                description: '量子コンピュータについて概観。計算機としての位置付けや、その特性について説明します。',
                 img: waveslid,
                 link: '/QuantumFrontier/article/qi_for_beginners1'
             },
             {
-                title: 'QI for Beginners2',
-                description: 'QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。',
+                title: '量子コンピュータ基礎２',
+                description: '量子回路の基礎を中心に、簡単な量子計算についてご紹介します。',
                 img: datacity,
                 link: '/QuantumFrontier/article/qi_for_beginners2', 
             },
             {
-                title: 'QI for Beginners3',
-                description: 'QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。QIBの説明。',
+                title: '量子ウォーク',
+                description: '量子ウォーク(QW)について一般的な内容から、提案手法：量子ウォークグラフ分類で用いられたケースについてご紹介します。',
                 img: qcarch,
-                link: '/QuantumFrontier/article/qi_for_beginners3', 
+                link: '/QuantumFrontier/article/QauntumWalks', 
             },
             // {
             //     title: 'Introduction of QML',
@@ -49,8 +48,8 @@ class ArticleCards extends Component {
             //     link: '/QuantumFrontier/article/qsvm', 
             // },
             {
-                title: 'Quantum Walk・Graph classification',
-                description: 'QWGCの説明。QWGCの説明。QWGCの説明。QWGCの説明。QWGCの説明。',
+                title: '量子ウォークグラフ分類アルゴリズム',
+                description: '提案手法：量子ウォークグラフ分類(QWGC)アルゴリズムに関する解説記事です。',
                 img: network,
                 link: '/QuantumFrontier/article/qwnn_graph_classification', 
             },

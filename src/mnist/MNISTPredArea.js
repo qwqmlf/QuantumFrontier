@@ -6,7 +6,7 @@ import { BrowserView, MobileView } from 'react-device-detect';
 
 import PredictionArea from './PredictionArea.js';
 import axios from 'axios';
-import{ Helmet } from 'react-helmet';
+// import{ Helmet } from 'react-helmet';
 // import languagePluginLoader from './pyodide';
 
 
@@ -102,7 +102,7 @@ export class MNISTPredArea extends Component {
 
         console.log('jjjjjjjjjjjjjjjjjj')
         console.log(encodedImage)
-        
+
         axios.post('/QuantumFrontier/', { params: {encodedImage}})
             // .then((res) => {
             //     const result = res.data;
@@ -146,9 +146,9 @@ export class MNISTPredArea extends Component {
     render() {
         return (
             <div>
-                <Helmet >
+                {/* <Helmet >
                     <script src="https://extremely-alpha.iodide.app/pyodide-0.8.1/pyodide.js"></script>
-                </Helmet>
+                </Helmet> */}
 
                 <div>
                     <BrowserView>

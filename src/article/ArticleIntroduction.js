@@ -93,7 +93,7 @@ function ArticleIntroduction() {
             <div className={classes.itemStyle}>
                 <p>
                     <span>このページでは量子機械学習を学ぶためのコンテンツが用意されています。</span>
-                    <span>内容は、Section1の量子コンピュータの簡単なおさらいから、Section2では量子機械学習(QML)・量子ウォーク(QW)の基礎知識、そしてSection3では本プロジェクトから生まれた新しい量子機械学習のメソッドまでを紹介します。</span>
+                    <span>内容は、Section1の量子コンピュータの簡単なおさらいから、Section2では量子ウォーク(QW)の基礎知識、そしてSection3では本プロジェクトから生まれた新しい量子機械学習のメソッドまでを紹介します。</span>
                 </p>
             </div>
 
@@ -102,23 +102,23 @@ function ArticleIntroduction() {
             </div>
             <div className={classes.itemStyle}>
                 <p>
-                    <span>Section1では量子コンピュータの基礎的な知識を簡単に解説しています。</span>
-                    <span>１ぺージは「量子ビット」、考え中...。</span>
-                    <span>続く２ぺージは「量子計算」の基礎的な範囲から</span>
-                    <span>そして３ぺージは...</span>
+                    Section1では量子コンピュータの基礎的な知識を簡単に解説しています。
+                    量子コンピューティングの概観から、ゲート式量子コンピューティングの基礎的な計算についてご紹介します。
                 </p>
                 <ul>
-                    <li className={classes.list}>Quantum Information for Beginners 1</li>
-                    <li className={classes.list}>Quantum Information for Beginners 2</li>
-                    <li className={classes.list}>Quantum Information for Beginners 3</li>
+                    <li className={classes.list}>量子コンピュータ基礎</li>
+                    {/* <li className={classes.list}>量子コンピュータ基礎２</li> */}
                 </ul>
             </div>
             <div className={classes.stitleStyle}>
                 <span>Section 2</span>
             </div>
             <div className={classes.itemStyle}>
+                <p>
+                    Section2では量子ウォークに関する基礎的な知識から、今回提案した量子機械学習量子機械学習アルゴリズムで使われている量子ウォークについてご紹介します。
+                </p>
                 <ul>        
-                    <li className={classes.list}>Introduction of Quantum Machine Learning</li>
+                    {/* <li className={classes.list}>Introduction of Quantum Machine Learning</li> */}
                     <li className={classes.list}>Application of Quantum Machine Learning</li>
                 </ul>
             </div>
@@ -126,8 +126,11 @@ function ArticleIntroduction() {
                 <span>Section 3</span>
             </div>
             <div className={classes.itemStyle}>
+                <p>
+                    Section3では今回提案した量子ウォークを用いたグラフ分類機械学習アルゴリズムについてご紹介します。
+                </p>
                 <ul>
-                    <li className={classes.list}>Quantum Support Vector Machine</li>
+                    {/* <li className={classes.list}>Quantum Support Vector Machine</li> */}
                     <li className={classes.list}>Quantum Walk and Graph classification</li>
                 </ul>
             </div>

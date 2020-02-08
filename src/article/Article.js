@@ -6,12 +6,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import ArticleHeader from './ArticleHeader';
 import ArticleIntroduction from './ArticleIntroduction';
+// import Qi_for_beginners1 from './articles/Qi_for_beginners1';
 import Qi_for_beginners1 from './articles/Qi_for_beginners1';
 import Qi_for_beginners2 from './articles/Qi_for_beginners2';
-import Qi_for_beginners3 from './articles/Qi_for_beginners3';
-import Introduction_of_qml from './articles/Introduction_of_qml';
-import Application_of_qml from './articles/Application_of_qml';
-import Qsvm from './articles/Qsvm';
+import QauntumWalks from './articles/QuantumWalks.js';
 import Qwnn_graph_classification from './articles/Qwnn_graph_classification';
 
 import ArticleCards from './ArticleCards';
@@ -87,10 +85,10 @@ function Article(){
                                 <Route exact path={'/QuantumFrontier/article'} component={ArticleIntroduction}/>
                                 <Route path={'/QuantumFrontier/article/qi_for_beginners1'} component={Qi_for_beginners1} />
                                 <Route path={'/QuantumFrontier/article/qi_for_beginners2'} component={Qi_for_beginners2} />
-                                <Route path={'/QuantumFrontier/article/qi_for_beginners3'} component={Qi_for_beginners3} />
-                                <Route path={'/QuantumFrontier/article/introduction_of_qml'} component={Introduction_of_qml} />
-                                <Route path={'/QuantumFrontier/article/application_of_qml'} component={Application_of_qml} />
-                                <Route path={'/QuantumFrontier/article/qsvm'} component={Qsvm} />
+                                <Route path={'/QuantumFrontier/article/QauntumWalks'} component={QauntumWalks} />
+                                {/* <Route path={'/QuantumFrontier/article/introduction_of_qml'} component={Introduction_of_qml} /> */}
+                                {/* <Route path={'/QuantumFrontier/article/application_of_qml'} component={Application_of_qml} /> */}
+                                {/* <Route path={'/QuantumFrontier/article/qsvm'} component={Qsvm} /> */}
                                 <Route path={'/QuantumFrontier/article/qwnn_graph_classification'} component={Qwnn_graph_classification} />
                             </Router>
                         </div>
