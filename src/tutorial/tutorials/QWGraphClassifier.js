@@ -3,33 +3,42 @@ import { makeStyles } from '@material-ui/core/styles';
 import Gist from 'super-react-gist';
 
 const colors = {
-    background: '#262626', 
-    resultBack: '#f2f2f2',
-    h1: '#fff', 
-    text: 'fff', 
-    resultText: '#000',
-    icon: 'BFBFBF'
+    background: '#262626',
+    h1: '#fff',
+    text: '#fff',
+    icon: '#BFBFBF',
+    imgBack: '#fff',
 }
 
 const useStyles = makeStyles(theme => ({
-    root: {
-    },
     titleStyle: {
+        color: colors.text,
         padding: '20px 0px 0px 20px', 
         margin: '40px',
         lineHeight: '46px', 
         fontSize: '24pt', 
         [theme.breakpoints.down('sm')]: {
             fontSize: '26pt',
+            margin: '20px',
+            lineHeight: '46px', 
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: '0px', 
+            fontSize: '16pt',
         },
         fontWeight: 'bold',
         textAlign: 'left', 
         borderBottom: 'groove 3px #C0C0C0', 
     }, 
     stitleStyle: { 
+        color: colors.text,
         margin: '10px 60px',
         [theme.breakpoints.down('740')]: {
             margin: '10px 40px',
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: '0px', 
+            margin: '20px',
         },
         lineHeight: '46px', 
         fontSize: '16pt', 
@@ -37,14 +46,37 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'left', 
     }, 
     itemStyle: {
+        color: colors.text,
         margin: '10px 60px',
         [theme.breakpoints.down('740')]: {
             margin: '10px 40px',
         },
+        [theme.breakpoints.down('xs')]: {
+            margin: '20px',
+        },
+        fontFamily: 'Quicksand YuGothic HiraginoKakuGothic Meiryo Osaka MSPGothic sansSerif', 
     }, 
     imgStyle: {
-        height: '360px',
-        width: '500px',
+        background: colors.imgBack,
+        margin: '0px 260px',
+        padding: '20px',
+        [theme.breakpoints.down('lg')]: {
+            margin: '0px 200px',
+        },
+        [theme.breakpoints.down('md')]: {
+            margin: '0px 160px',
+        },
+        [theme.breakpoints.down('sm')]: {
+            margin: '0px 80px'
+        },
+        [theme.breakpoints.down('xs')]: {
+            margin: '0px 0px',
+            padding: '0px',
+        },
+        
+        textAlign: 'center',
+        borderRadius: '5px 5px 5px 5px/5px 5px 5px 5px',
+        border: 'solid 1px #696969',
     },
     gistStyle: {
         margin: '40px',

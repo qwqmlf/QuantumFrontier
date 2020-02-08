@@ -87,7 +87,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     paragraph: {
-        fontSize: '16pt',
+        fontSize: '14pt',
         marginBottom: '40px',
         margin: '60px',
         [theme.breakpoints.down('xs')]: {

@@ -6,8 +6,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
     titleStyle: {
-        padding: '20px 0px 0px 20px', 
-        margin: '40px',
         lineHeight: '46px', 
         fontSize: '24pt', 
         [theme.breakpoints.down('sm')]: {
@@ -18,9 +16,9 @@ const useStyles = makeStyles(theme => ({
         borderBottom: 'groove 3px #C0C0C0', 
     }, 
     stitleStyle: { 
-        margin: '10px 60px',
-        [theme.breakpoints.down('740')]: {
-            margin: '10px 40px',
+        margin: '10px 40px',
+        [theme.breakpoints.down('xs')]:{
+            margin: '20px',
         },
         lineHeight: '46px', 
         fontSize: '16pt', 
@@ -28,12 +26,11 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'left', 
     }, 
     itemStyle: {
-        margin: '10px 60px',
-        [theme.breakpoints.down('740')]: {
-            margin: '10px 40px',
-        },
+        margin: '10px 40px',
         fontSize: '14px',
-        fontFamily: 'Quicksand YuGothic HiraginoKakuGothic Meiryo Osaka MSPGothic sansSerif', 
+        [theme.breakpoints.down('xs')]:{
+            margin: '20px',
+        },
     },  
 }));
 

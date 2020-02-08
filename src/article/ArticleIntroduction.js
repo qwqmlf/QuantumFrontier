@@ -46,6 +46,7 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'left', 
     }, 
     itemStyle: {
+        fontSize: '14pt',
         color: colors.text,
         margin: '10px 60px',
         [theme.breakpoints.down('740')]: {
@@ -54,7 +55,6 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('xs')]: {
             margin: '20px',
         },
-        fontFamily: 'Quicksand YuGothic HiraginoKakuGothic Meiryo Osaka MSPGothic sansSerif', 
     }, 
     imgStyle: {
         background: colors.imgBack,

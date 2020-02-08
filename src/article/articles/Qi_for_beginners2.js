@@ -65,7 +65,6 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('xs')]: {
             margin: '20px',
         },
-        fontFamily: 'Quicksand YuGothic HiraginoKakuGothic Meiryo Osaka MSPGothic sansSerif', 
     }, 
     imgStyle: {
         background: colors.imgBack,
@@ -88,7 +87,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     paragraph: {
-        fontSize: '16pt',
+        fontSize: '14pt',
         marginBottom: '40px',
         margin: '60px',
         [theme.breakpoints.down('xs')]: {
