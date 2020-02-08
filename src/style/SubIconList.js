@@ -48,7 +48,7 @@ function SubIconList() {
                 </ListItem>
             </List>
             <List>
-                <ListItem button key={'Contact us'}>
+                <ListItem button key={'Contact us'} onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=qwqmlft@gmail.com')}  >
                     <ListItemIcon>
                         <MailIcon className={classes.iconButton} />
                     </ListItemIcon>
@@ -56,7 +56,7 @@ function SubIconList() {
                 </ListItem>
             </List>
             <List>
-                <ListItem button key={'About AQUA Lab'}>
+                <ListItem button key={'About AQUA Lab'} onClick={() => window.open('https://aqua.sfc.wide.ad.jp/')} >
                     <ListItemIcon>
                         <WavesIcon className={classes.iconButton} />
                     </ListItemIcon>

@@ -4,7 +4,7 @@ import MemberCardItem from './MemberCardItem.js';
 import uuid from 'uuid';
 
 import nishio from '../img/Nishio.png';
-import satoh from '../img/satoh.JPG';
+import satoh from '../img/satoh.jpg';
 import ohkura from '../img/ohkura.png';
 
 const colors = {

@@ -39,7 +39,6 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('740')]: {
             margin: '10px 40px',
         },
-        fontSize: '14px',
         fontFamily: 'Quicksand YuGothic HiraginoKakuGothic Meiryo Osaka MSPGothic sansSerif', 
     },  
   }));
