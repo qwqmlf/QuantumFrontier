@@ -63,6 +63,12 @@ object-assign
  * Licensed under MIT License
  */
 
+/*
+      object-assign
+      (c) Sindre Sorhus
+      @license MIT
+      */
+
 /**
  * A better abstraction over CSS.
  *
