@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import MemberCardItem from './MemberCardItem.js';
 import uuid from 'uuid';
 
-import cap from '../img/captainameria.jpg';
-import iron from '../img/ironman.jpeg';
-import spider from '../img/spiderman.jpg';
+import nishio from '../img/Nishio.png';
+import satoh from '../img/satoh.JPG';
+import ohkura from '../img/ohkura.png';
 
 const colors = {
     background: '#262626',
@@ -23,7 +23,7 @@ export class MemberCard extends Component {
                 institution: '慶應義塾大学 総合政策学部',
                 description: '',
                 keywords: '量子コンパイラ、量子ウォーク',
-                img: cap, 
+                img: nishio, 
             },
             {
                 id: uuid.v4(),
@@ -31,7 +31,7 @@ export class MemberCard extends Component {
                 institution: '慶應義塾大学 環境情報学部',
                 description: '',
                 keywords: '量子ウォーク、量子機械学習',
-                img: iron, 
+                img: satoh, 
             },
             {
                 id: uuid.v4(),
@@ -39,7 +39,7 @@ export class MemberCard extends Component {
                 institution: '慶應義塾大学 総合政策学部',
                 description: '',
                 keywords: 'グローバーアルゴリズム',
-                img: spider, 
+                img: ohkura, 
             },
         ]   
     }

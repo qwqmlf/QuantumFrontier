@@ -23,10 +23,20 @@ const useStyles = makeStyles(theme =>({
         background: colors.background,
         color: colors.text,
         padding: '10px',
-        [theme.breakpoints.down('sm')]: {
-            padding: sizes.padding,
-        },
         display: 'flex',
+        [theme.breakpoints.down('xs')]: {
+            padding: sizes.padding,
+            display: 'block',
+        },
+    },
+    img: {
+        width: '300px',
+        height: '400px',
+        objectFit: 'contain',
+        [theme.breakpoints.down('xs')]: {
+            width: '300px',
+            height: '200px',
+        },
     },
     description: {
         padding: '10px',
@@ -59,10 +69,7 @@ function MenberCardItem(props) {
         <div className={classes.contentStyle}>
             <img src={props.item.img} 
                 alt='image'　
-                style={{
-                    width: '200px',
-                    height: '300px',
-                }}
+                className={classes.img}
             />
             <div className={classes.description}>
                 <div className={classes.name}>

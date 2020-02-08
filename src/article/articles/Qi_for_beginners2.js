@@ -46,10 +46,7 @@ const useStyles = makeStyles(theme => ({
     }, 
     stitle: { 
         color: colors.text,
-        margin: '10px 60px',
-        [theme.breakpoints.down('740')]: {
-            margin: '10px 40px',
-        },
+        margin: '10px 40px',
         [theme.breakpoints.down('xs')]: {
             padding: '0px', 
             margin: '20px',
