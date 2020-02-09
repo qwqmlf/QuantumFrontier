@@ -6,7 +6,7 @@ import { BrowserView, MobileView } from 'react-device-detect';
 
 import PredictionArea from './PredictionArea.js';
 import axios from 'axios';
-// import{ Helmet } from 'react-helmet';
+import{ Helmet } from 'react-helmet';
 // import languagePluginLoader from './pyodide';
 
 
@@ -189,7 +189,7 @@ export class MNISTPredArea extends Component {
                             height="300px"
                             onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
                             onMouseUp={() => this.endDrawing()}
-                            onMouseLeave={() => this.endDrawing()}
+                            onMouseLeave = {() => this.endDrawing()}
                             onMouseMove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
                             style={style.canvas}
                             />
@@ -201,12 +201,13 @@ export class MNISTPredArea extends Component {
                             width={ window.innerWidth/2 }
                             height={ window.innerWidth/2 }
                             
-                            ontouchstart={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
-                            ontouchend={() => this.endDrawing()}
-                            onmouseleave={() => this.endDrawing()}
+                            onMouseDown = {e => e.preventDefault()}
+                            onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                            onMouseMove = {e => e.preventDefault()}
+                            onMouseMove = {e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                            onMouseUp = {() => this.endDrawing()}
+                            onMouseLeave = {() => this.endDrawing()}
 
-                            ontouchmove ={e => e.preventDefault()}
-                            ontouchmove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
                             style={style.canvas}
                         />
                     </MobileView>

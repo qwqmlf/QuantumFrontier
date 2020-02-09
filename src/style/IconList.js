@@ -79,12 +79,12 @@ function IconList() {
                     </ListItemIcon>
                     <ListItemText primary={'Web Article'} />
                 </ListItem>
-                {/* <ListItem button key={'About project'} onClick={handleToProjectPage} >
+                <ListItem button key={'About project'} onClick={handleToProjectPage} >
                     <ListItemIcon>
                     <LaptopMacIcon className={classes.iconButton} />
                     </ListItemIcon>
                     <ListItemText primary={'About project'} />
-                </ListItem> */}
+                </ListItem>
             </List>
         </div>
     )

@@ -11,6 +11,7 @@
     "react-device-detect": "^1.11.14",
     "react-dom": "^16.8.6",
     "react-embed-gist": "^1.0.10",
+    "react-google-slides": "^1.0.2",
     "react-helmet": "^5.2.1",
     "react-katex": "^2.0.2",
     "react-mathjax": "^1.0.1",
