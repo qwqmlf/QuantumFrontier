@@ -176,9 +176,9 @@ export class MNISTPredArea extends Component {
     render() {
         return (
             <div>
-                {/* <Helmet >
+                <Helmet >
                     <script src="https://extremely-alpha.iodide.app/pyodide-0.8.1/pyodide.js"></script>
-                </Helmet> */}
+                </Helmet>
 
                 <div>
                     <BrowserView>
@@ -200,10 +200,13 @@ export class MNISTPredArea extends Component {
                             ref="canvas"
                             width={ window.innerWidth/2 }
                             height={ window.innerWidth/2 }
-                            onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
-                            onMouseUp={() => this.endDrawing()}
-                            onMouseLeave={() => this.endDrawing()}
-                            onMouseMove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                            
+                            ontouchstart={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                            ontouchend={() => this.endDrawing()}
+                            onmouseleave={() => this.endDrawing()}
+
+                            ontouchmove ={e => e.preventDefault()}
+                            ontouchmove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
                             style={style.canvas}
                         />
                     </MobileView>
