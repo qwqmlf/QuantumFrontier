@@ -92,7 +92,7 @@ function HomeItem(props){
             </div>
             <div className={classes.itemStyle}>
                 <p>
-                    Quantum Fontireは量子コンピューティングの最先端の研究と社会をつなぐためのツールとして開発されました。
+                    Quantum Fontierは量子コンピューティングの最先端の研究と社会をつなぐためのツールとして開発されました。
                 </p>
                 <p>
                     開発、実装、実問題への応用を通して得られた知見を、Webページ上でチュートリアルや学習用教材とともにご紹介しています。

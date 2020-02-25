@@ -5,9 +5,7 @@ import EqualizerIcon from '@material-ui/icons/Equalizer';
 import { BrowserView, MobileView } from 'react-device-detect';
 
 import PredictionArea from './PredictionArea.js';
-import axios from 'axios';
 import{ Helmet } from 'react-helmet';
-// import languagePluginLoader from './pyodide';
 
 
 const colors = {
@@ -122,41 +120,14 @@ export class MNISTPredArea extends Component {
         const ctx = this.getContext();
         ctx.clearRect(0, 0, ctx.canvas.clientWidth, ctx.canvas.clientHeight);
         ctx.beginPath();
+        this.setState({ isPredicted: false });
     }
 
 
     // jsonから予測結果を引っ張ってくる
     resultGet(){
-        let numberImage = document.getElementById("canvas")
-        let encodedImage = numberImage.toDataURL();
+        this.setState({ isPredicted: true });
 
-        console.log('jjjjjjjjjjjjjjjjjj')
-        console.log(encodedImage)
-
-        axios.post('/QuantumFrontier/', { params: {encodedImage}})
-            // .then((res) => {
-            //     const result = res.data;
-            //     this.setState({
-            //         drawing: false, 
-            //         isPredicted: true, 
-            //         data: result,
-            //     }, 
-            //     console.log(result)
-            //     );
-            // })
-        axios.get('/QuantumFrontier/')
-        .then((res) => {
-
-            console.log(res)
-            // const result = res.data;
-            // this.setState({
-            //     drawing: false, 
-            //     isPredicted: true, 
-            //     data: result,
-            // }, 
-            // console.log(result)
-            // );
-            })
     }
  
     // resultGet() {
@@ -174,88 +145,190 @@ export class MNISTPredArea extends Component {
     // }
 
     render() {
-        return (
-            <div>
-                <Helmet >
-                    <script src="https://extremely-alpha.iodide.app/pyodide-0.8.1/pyodide.js"></script>
-                </Helmet>
-
+        if(this.state.isPredicted){
+            return (
                 <div>
-                    <BrowserView>
-                        <canvas
-                            id='canvas'
-                            ref='canvas'
-                            width="300px"
-                            height="300px"
-                            onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
-                            onMouseUp={() => this.endDrawing()}
-                            onMouseLeave = {() => this.endDrawing()}
-                            onMouseMove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
-                            style={style.canvas}
-                            />
-                    </BrowserView>
+                    <Helmet >
+                        <script type="text/javascript" src="brython\www\src\brython.js"></script>
+                        <script type="text/python" src="./qmnist.py"></script>
+                    </Helmet>
 
-                    <MobileView>
-                        <canvas
-                            ref="canvas"
-                            width={ window.innerWidth/2 }
-                            height={ window.innerWidth/2 }
+                    <div>
+                        <BrowserView>
+                            <canvas
+                                id='canvas'
+                                ref='canvas'
+                                width="300px"
+                                height="300px"
+                                onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                                onMouseUp={() => this.endDrawing()}
+                                onMouseLeave = {() => this.endDrawing()}
+                                onMouseMove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                                style={style.canvas}
+                                />
+                        </BrowserView>
+
+                        <MobileView>
+                            <canvas
+                                ref="canvas"
+                                width={ window.innerWidth/2 }
+                                height={ window.innerWidth/2 }
+                                
+                                onMouseDown = {e => e.preventDefault()}
+                                onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                                onMouseMove = {e => e.preventDefault()}
+                                onMouseMove = {e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                                onMouseUp = {() => this.endDrawing()}
+                                onMouseLeave = {() => this.endDrawing()}
+
+                                style={style.canvas}
+                            />
+                        </MobileView>
+                    </div>
+
+                    <div style={style.buttonArea}>
+                        <BrowserView>
+                            <Button
+                                style={style.resetButton}
+                                onClick={()=> this.resetCanvas()}
+                            >
+                                delete
+                                <DeleteIcon fontSize="midium" style={style.icon}/> 
+                            </Button>
+                            <Button
+                                id="prediction"
+                                style={style.predictButton}
+                                onClick={()=> this.resultGet()}
+                            >
+                                predict
+                                <EqualizerIcon fontSize="midium" 
+                                    style={style.icon}
+                                />
+                            </Button>
+                        </BrowserView>
+
+                        <MobileView>
                             
-                            onMouseDown = {e => e.preventDefault()}
-                            onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
-                            onMouseMove = {e => e.preventDefault()}
-                            onMouseMove = {e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
-                            onMouseUp = {() => this.endDrawing()}
-                            onMouseLeave = {() => this.endDrawing()}
+                            {/* モバイル対応する */}
+                            <Button
+                                id="prediction"
+                                style={style.resetButton}
+                                onClick={()=> this.resetCanvas()}
+                            >
+                                delete
+                                <DeleteIcon fontSize="midium" style={style.icon}/> 
+                            </Button>
+                            <Button
+                                style={style.predictButton}
+                                onClick={()=> this.resultGet()}
+                            >
+                                predict
+                                <EqualizerIcon fontSize="midium" style={style.icon} />
+                            </Button>
 
-                            style={style.canvas}
-                        />
-                    </MobileView>
+                        </MobileView>
+                    </div>
+                    {/* <PredictionArea  isPredicted={this.state.isPredicted}/> */}
+                    <div>
+                        <p>
+                            <span id="prob"></span> %の確率で、あなたが書いた数字は、
+                        </p>
+                        <p>
+                            <span id="ans"></span> と判定されました。
+                        </p>
+                    </div>
                 </div>
+            )
+        }else{
+            return (
+                <div>
+                    <Helmet >
+                        <script type="text/javascript" src="brython\www\src\brython.js"></script>
+                        <script type="text/python" src="./qmnist.py"></script>
+                    </Helmet>
 
-                <div style={style.buttonArea}>
-                    <BrowserView>
-                        <Button
-                            style={style.resetButton}
-                            onClick={()=> this.resetCanvas()}
-                        >
-                            delete
-                            <DeleteIcon fontSize="midium" style={style.icon}/> 
-                        </Button>
-                        <Button
-                            style={style.predictButton}
-                            onClick={()=> this.resultGet()}
-                        >
-                            predict
-                            <EqualizerIcon fontSize="midium" 
-                                style={style.icon}
+                    <div>
+                        <BrowserView>
+                            <canvas
+                                id='canvas'
+                                ref='canvas'
+                                width="300px"
+                                height="300px"
+                                onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                                onMouseUp={() => this.endDrawing()}
+                                onMouseLeave = {() => this.endDrawing()}
+                                onMouseMove={e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                                style={style.canvas}
+                                />
+                        </BrowserView>
+
+                        <MobileView>
+                            <canvas
+                                ref="canvas"
+                                width={ window.innerWidth/2 }
+                                height={ window.innerWidth/2 }
+                                
+                                onMouseDown = {e => e.preventDefault()}
+                                onMouseDown={e => this.startDrawing(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                                onMouseMove = {e => e.preventDefault()}
+                                onMouseMove = {e => this.draw(e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
+                                onMouseUp = {() => this.endDrawing()}
+                                onMouseLeave = {() => this.endDrawing()}
+
+                                style={style.canvas}
                             />
-                        </Button>
-                    </BrowserView>
+                        </MobileView>
+                    </div>
 
-                    <MobileView>
-                        
-                        {/* モバイル対応する */}
-                        <Button
-                            style={style.resetButton}
-                            onClick={()=> this.resetCanvas()}
-                        >
-                            delete
-                            <DeleteIcon fontSize="midium" style={style.icon}/> 
-                        </Button>
-                        <Button
-                            style={style.predictButton}
-                            onClick={()=> this.resultGet()}
-                        >
-                            predict
-                            <EqualizerIcon fontSize="midium" style={style.icon} />
-                        </Button>
+                    <div style={style.buttonArea}>
+                        <BrowserView>
+                            <Button
+                                style={style.resetButton}
+                                onClick={()=> this.resetCanvas()}
+                            >
+                                delete
+                                <DeleteIcon fontSize="midium" style={style.icon}/> 
+                            </Button>
+                            <Button
+                                id="prediction"
+                                style={style.predictButton}
+                                onClick={()=> this.resultGet()}
+                            >
+                                predict
+                                <EqualizerIcon fontSize="midium" 
+                                    style={style.icon}
+                                />
+                            </Button>
+                        </BrowserView>
 
-                    </MobileView>
+                        <MobileView>
+                            
+                            {/* モバイル対応する */}
+                            <Button
+                                id="prediction"
+                                style={style.resetButton}
+                                onClick={()=> this.resetCanvas()}
+                            >
+                                delete
+                                <DeleteIcon fontSize="midium" style={style.icon}/> 
+                            </Button>
+                            <Button
+                                style={style.predictButton}
+                                onClick={()=> this.resultGet()}
+                            >
+                                predict
+                                <EqualizerIcon fontSize="midium" style={style.icon} />
+                            </Button>
+
+                        </MobileView>
+                    </div>
+                    {/* <PredictionArea  isPredicted={this.state.isPredicted}/> */}
+                    <div>
+                        <p>PREDICTボタンを押すと、予測結果を表示します。</p>
+                    </div>
                 </div>
-                <PredictionArea data={this.state.data} isPredicted={this.state.isPredicted}/>
-            </div>
-        )  
+            )
+        }  
     }
 }
 

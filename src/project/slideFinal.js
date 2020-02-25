@@ -8,7 +8,7 @@ export class slideFinal extends Component {
                 <ReactGoogleSlides
                     width={640}
                     height={480}
-                    slidesLink="https://docs.google.com/presentation/d/1TainXdVJMS_dBkJ-yUUJELs36sJUJ030RXcexuf2tUw/edit?usp=sharing"
+                    slidesLink=" /presentation/d/1TainXdVJMS_dBkJ-yUUJELs36sJUJ030RXcexuf2tUw/edit?usp=sharing"
                     slideDuration={5}
                     showControls
                     loop

@@ -11,10 +11,10 @@ export class PredictionArea extends Component {
             return (
                 <div>
                     <p>
-                        {this.props.data.prob} %の確率で、あなたが書いた数字は、
+                        <span id="prob"></span> %の確率で、あなたが書いた数字は、
                     </p>
                     <p>
-                        {this.props.data.ans} と判定されました。
+                        <span id="ans"></span> と判定されました。
                     </p>
                 </div>
             )
