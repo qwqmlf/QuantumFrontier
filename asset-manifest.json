@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/QuantumFrontier/static/css/main.b7a80aaa.chunk.css",
-    "main.js": "/QuantumFrontier/static/js/main.6e32f740.chunk.js",
-    "main.js.map": "/QuantumFrontier/static/js/main.6e32f740.chunk.js.map",
+    "main.js": "/QuantumFrontier/static/js/main.ee6da82c.chunk.js",
+    "main.js.map": "/QuantumFrontier/static/js/main.ee6da82c.chunk.js.map",
     "runtime-main.js": "/QuantumFrontier/static/js/runtime-main.a9dbf75a.js",
     "runtime-main.js.map": "/QuantumFrontier/static/js/runtime-main.a9dbf75a.js.map",
     "static/css/2.9a9f3aab.chunk.css": "/QuantumFrontier/static/css/2.9a9f3aab.chunk.css",
-    "static/js/2.3cc3ee79.chunk.js": "/QuantumFrontier/static/js/2.3cc3ee79.chunk.js",
-    "static/js/2.3cc3ee79.chunk.js.map": "/QuantumFrontier/static/js/2.3cc3ee79.chunk.js.map",
+    "static/js/2.c838cef3.chunk.js": "/QuantumFrontier/static/js/2.c838cef3.chunk.js",
+    "static/js/2.c838cef3.chunk.js.map": "/QuantumFrontier/static/js/2.c838cef3.chunk.js.map",
     "index.html": "/QuantumFrontier/index.html",
-    "precache-manifest.f5aaaf11070b6c78d55d9491a84c520f.js": "/QuantumFrontier/precache-manifest.f5aaaf11070b6c78d55d9491a84c520f.js",
+    "precache-manifest.5dce6646fa9ad6c060b237ed4ed1310d.js": "/QuantumFrontier/precache-manifest.5dce6646fa9ad6c060b237ed4ed1310d.js",
     "service-worker.js": "/QuantumFrontier/service-worker.js",
     "static/css/2.9a9f3aab.chunk.css.map": "/QuantumFrontier/static/css/2.9a9f3aab.chunk.css.map",
     "static/css/main.b7a80aaa.chunk.css.map": "/QuantumFrontier/static/css/main.b7a80aaa.chunk.css.map",
-    "static/js/2.3cc3ee79.chunk.js.LICENSE": "/QuantumFrontier/static/js/2.3cc3ee79.chunk.js.LICENSE",
+    "static/js/2.c838cef3.chunk.js.LICENSE": "/QuantumFrontier/static/js/2.c838cef3.chunk.js.LICENSE",
     "static/media/CNOT.png": "/QuantumFrontier/static/media/CNOT.a72da9ab.png",
     "static/media/katex.min.css": "/QuantumFrontier/static/media/KaTeX_Typewriter-Regular.f43e8696.woff2",
     "static/media/Nishio.png": "/QuantumFrontier/static/media/Nishio.9ec2e1fc.png",
@@ -46,8 +46,8 @@
   "entrypoints": [
     "static/js/runtime-main.a9dbf75a.js",
     "static/css/2.9a9f3aab.chunk.css",
-    "static/js/2.3cc3ee79.chunk.js",
+    "static/js/2.c838cef3.chunk.js",
     "static/css/main.b7a80aaa.chunk.css",
-    "static/js/main.6e32f740.chunk.js"
+    "static/js/main.ee6da82c.chunk.js"
   ]
 }
